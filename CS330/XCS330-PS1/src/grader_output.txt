@@ -1,0 +1,29 @@
+========== START GRADING
+----- START 1a-0-basic:  single user and item embedding shape
+----- END 1a-0-basic [took 0:00:00.000715 (max allowed 5 seconds), 1/1 points]
+
+----- START 1a-1-basic: multiple user and item embedding shape
+----- END 1a-1-basic [took 0:00:00.000583 (max allowed 5 seconds), 1/1 points]
+
+----- START 1a-2-basic: user and item bias terms shape
+----- END 1a-2-basic [took 0:00:00.000064 (max allowed 5 seconds), 1/1 points]
+
+----- START 1b-0-basic: verifying mlp layers size and type at each layer
+----- END 1b-0-basic [took 0:00:00.000163 (max allowed 5 seconds), 1/1 points]
+
+----- START 2-0-basic: check prediction and score shapes for forward_with_embedding_sharing
+----- END 2-0-basic [took 0:00:00.000946 (max allowed 5 seconds), 1/1 points]
+
+----- START 2-1-basic: check prediction and score shapes for forward_without_embedding_sharing
+----- END 2-1-basic [took 0:00:00.000561 (max allowed 5 seconds), 1/1 points]
+
+----- START 2-2-basic: mrr, mse accuracy for forward_with_embedding_sharing
+----- END 2-2-basic [took 0:00:03.463230 (max allowed 30 seconds), 1/1 points]
+
+----- START 2-3-basic: mrr, mse accuracy for forward_without_embedding_sharing
+----- END 2-3-basic [took 0:00:02.246375 (max allowed 30 seconds), 1/1 points]
+
+Note that the hidden test cases do not check for correctness.
+They are provided for you to verify that the functions do not crash and run within the time limit.
+Points for these parts not assigned by the grader unless the solution is present (indicated by "???").
+========== END GRADING [8/8 points + 0/0 extra credit]

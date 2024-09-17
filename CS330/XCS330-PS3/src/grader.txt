@@ -1,0 +1,47 @@
+========== START GRADING
+----- START 1b-0-basic: basic test
+----- END 1b-0-basic [took 0:00:02.023082 (max allowed 60 seconds), 2/2 points]
+
+----- START 1b-1-hidden: hidden test
+----- END 1b-1-hidden [took 0:00:01.829674 (max allowed 60 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1b-2-hidden:  Hidden test case for the Protonet with K = 5.
+----- END 1b-2-hidden [took 0:00:00.000348 (max allowed 1 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1b-3-hidden:  Hidden test case for the Protonet with K = 1.
+----- END 1b-3-hidden [took 0:00:00.000212 (max allowed 1 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 2a-0-basic: check that _inner_loop does not update parameters when train is set to False
+----- END 2a-0-basic [took 0:00:00.467987 (max allowed 30 seconds), 2/2 points]
+
+----- START 2a-1-basic: check that _inner_loop does update parameters when train is set to True
+----- END 2a-1-basic [took 0:00:00.465651 (max allowed 30 seconds), 2/2 points]
+
+----- START 2a-2-basic: heck prediction and accuracies shape for _inner_loop
+----- END 2a-2-basic [took 0:00:00.446822 (max allowed 60 seconds), 4/4 points]
+
+----- START 2a-3-hidden: check prediction and accuracies values for initial training steps in _inner_loop
+----- END 2a-3-hidden [took 0:00:01.444847 (max allowed 90 seconds), ???/4 points] (hidden test ungraded)
+
+----- START 2b-0-basic: check shapes are correct for _outer_step
+----- END 2b-0-basic [took 0:00:00.731984 (max allowed 60 seconds), 5/5 points]
+
+----- START 2b-1-hidden: check values for _outer_step during initial training
+----- END 2b-1-hidden [took 0:00:01.145375 (max allowed 60 seconds), ???/3 points] (hidden test ungraded)
+
+----- START 2b-2-hidden:  Hidden test case for the default MAML.
+----- END 2b-2-hidden [took 0:00:00.000305 (max allowed 1 seconds), ???/1 points] (hidden test ungraded)
+
+----- START 2b-3-hidden:  Hidden test case for the MAML with 0.04 learning rate.
+----- END 2b-3-hidden [took 0:00:00.000193 (max allowed 1 seconds), ???/1 points] (hidden test ungraded)
+
+----- START 2b-4-hidden:  Hidden test case for the MAML with 0.04 learning rate and 5 inner steps.
+----- END 2b-4-hidden [took 0:00:00.000179 (max allowed 1 seconds), ???/1 points] (hidden test ungraded)
+
+----- START 2b-5-hidden:  Hidden test case for the MAML with 0.04 learning rate and 5 inner steps.
+----- END 2b-5-hidden [took 0:00:00.000183 (max allowed 1 seconds), ???/1 points] (hidden test ungraded)
+
+Note that the hidden test cases do not check for correctness.
+They are provided for you to verify that the functions do not crash and run within the time limit.
+Points for these parts not assigned by the grader unless the solution is present (indicated by "???").
+========== END GRADING [15/15 points + 0/0 extra credit]

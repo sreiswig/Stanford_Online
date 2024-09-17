@@ -1,0 +1,35 @@
+========== START GRADING
+----- START 1-0-basic:  Basic test case for testing the output shape.
+----- END 1-0-basic [took 0:00:00.014847 (max allowed 1 seconds), 5/5 points]
+
+----- START 1-1-basic: Basic test case for checking the ordering from the support and query sets.
+----- END 1-1-basic [took 0:00:00.748760 (max allowed 2 seconds), 5/5 points]
+
+----- START 1-2-hidden:  Hidden test case for testing the correct images and labels were properly sampled and post-processed.
+----- END 1-2-hidden [took 0:00:00.010424 (max allowed 1 seconds), ???/5 points] (hidden test ungraded)
+
+----- START 2-0-basic:  Basic test case for testing the MANN model output shape.
+----- END 2-0-basic [took 0:00:00.108772 (max allowed 2 seconds), 5/5 points]
+
+----- START 2-1-hidden:  Hidden test case for testing only the MANN.loss_function.
+----- END 2-1-hidden [took 0:00:00.131525 (max allowed 5 seconds), ???/5 points] (hidden test ungraded)
+
+----- START 2-2-hidden:  Hidden test case for testing the MANN model outputs.
+----- END 2-2-hidden [took 0:00:00.107245 (max allowed 5 seconds), ???/5 points] (hidden test ungraded)
+
+----- START 3-0-hidden:  Hidden test case for testing the accuracy for K = 1 and N = 2.
+----- END 3-0-hidden [took 0:00:00.000275 (max allowed 1 seconds), ???/3 points] (hidden test ungraded)
+
+----- START 3-1-hidden:  Hidden test case for testing the accuracy for K = 2 and N = 2.
+----- END 3-1-hidden [took 0:00:00.000103 (max allowed 1 seconds), ???/3 points] (hidden test ungraded)
+
+----- START 3-2-hidden:  Hidden test case for testing the accuracy for K = 1 and N = 3.
+----- END 3-2-hidden [took 0:00:00.000090 (max allowed 1 seconds), ???/3 points] (hidden test ungraded)
+
+----- START 3-3-hidden:  Hidden test case for testing the accuracy for K = 1 and N = 4.
+----- END 3-3-hidden [took 0:00:00.000097 (max allowed 1 seconds), ???/3 points] (hidden test ungraded)
+
+Note that the hidden test cases do not check for correctness.
+They are provided for you to verify that the functions do not crash and run within the time limit.
+Points for these parts not assigned by the grader unless the solution is present (indicated by "???").
+========== END GRADING [15/15 points + 0/0 extra credit]

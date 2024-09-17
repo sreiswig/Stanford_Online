@@ -1,0 +1,97 @@
+% This contents of this file will be inserted into the _Solutions version of the
+% output tex document.  Here's an example:
+
+% If assignment with subquestion (1.a) requires a written response, you will
+% find the following flag within this document: <SCPD_SUBMISSION_TAG>_1a
+% In this example, you would insert the LaTeX for your solution to (1.a) between
+% the <SCPD_SUBMISSION_TAG>_1a flags.  If you also constrain your answer between the
+% START_CODE_HERE and END_CODE_HERE flags, your LaTeX will be styled as a
+% solution within the final document.
+
+% Please do not use the '<SCPD_SUBMISSION_TAG>' character anywhere within your code.  As expected,
+% that will confuse the regular expressions we use to identify your solution.
+\def\assignmentnum{2 }
+\def\assignmenttitle{XCS330 Problem Set \assignmentnum}
+\input{macros}
+\begin{document}
+\pagestyle{myheadings} \markboth{}{\assignmenttitle}
+
+% <SCPD_SUBMISSION_TAG>_entire_submission
+
+This handout includes space for every question that requires a written response.
+Please feel free to use it to handwrite your solutions (legibly, please).  If
+you choose to typeset your solutions, the |README.md| for this assignment includes
+instructions to regenerate this handout with your typeset \LaTeX{} solutions.
+\ruleskip
+
+
+\LARGE
+3.a
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_3_a
+\begin{answer}
+    % ### START CODE HERE ##
+	\begin{center}
+		\includegraphics[width=1.0\textwidth]{Results}
+	\end{center}
+	Based on the plot above, when we include more classes and the number of examples stays the same our performance drops significantly, learning is slower and plateaus earlier.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3_a
+
+\clearpage
+
+\LARGE
+3.b
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_3_b
+\begin{answer}
+    % ### START CODE HERE ###
+	Based on the graph from 3a we can see that when the number of examples is increased performance improves, the model learns faster and has a higher accuracy.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3_b
+
+\clearpage
+
+\LARGE
+4.a
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_4_a
+\begin{answer}
+    % ### START CODE HERE ###
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{TwoLayer31}\includegraphics[width=0.5\textwidth]{ThreeLayer31}
+	\end{center}
+	For this experiment I chose to change the number of layers in the network. 
+	The plot on the left is the 2 layer network from this assignment and the plot on the right shows a 3 layer network.
+	Both networks have the same K and N of 1 and 3. 
+	The choice to add another layer to the network is to investigate if adding more layers increases the performance of the N = 3 network. 
+	Looking at the plot we see that the 3 layer network learned faster but seems to begin overfitting. The next step would be to investigate increasing K in order to prevent the 3 layer network from overfitting.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_4_a
+
+\clearpage
+
+\LARGE
+4.b
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_4_b
+\begin{answer}
+    % ### START CODE HERE ###
+	\begin{center}
+		\includegraphics[width=1.0\textwidth]{HiddenState}
+	\end{center}
+	Based on the plot above we can see that by increasing the amount of memory accuracy goes up faster and plateaus higher. When the memory is decreased accuracy decreases as well.
+    % ### END CODE HERE ###
+  \end{answer}
+% <SCPD_SUBMISSION_TAG>_4_b
+
+% <SCPD_SUBMISSION_TAG>_entire_submission
+
+\end{document}

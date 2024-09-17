@@ -1,0 +1,177 @@
+% This contents of this file will be inserted into the _Solutions version of the
+% output tex document.  Here's an example:
+
+% If assignment with subquestion (1.a) requires a written response, you will
+% find the following flag within this document: <SCPD_SUBMISSION_TAG>_1a
+% In this example, you would insert the LaTeX for your solution to (1.a) between
+% the <SCPD_SUBMISSION_TAG>_1a flags.  If you also constrain your answer between the
+% START_CODE_HERE and END_CODE_HERE flags, your LaTeX will be styled as a
+% solution within the final document.
+
+% Please do not use the '<SCPD_SUBMISSION_TAG>' character anywhere within your code.  As expected,
+% that will confuse the regular expressions we use to identify your solution.
+\def\assignmentnum{4 }
+\def\assignmenttitle{XCS330 Problem Set \assignmentnum}
+\input{macros}
+\begin{document}
+\pagestyle{myheadings} \markboth{}{\assignmenttitle}
+
+% <SCPD_SUBMISSION_TAG>_entire_submission
+
+This handout includes space for every question that requires a written response.
+Please feel free to use it to handwrite your solutions (legibly, please).  If
+you choose to typeset your solutions, the |README.md| for this assignment includes
+instructions to regenerate this handout with your typeset \LaTeX{} solutions.
+\ruleskip
+
+\LARGE
+1.b (ii)
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_1_bii
+\begin{answer}
+    % ### START CODE HERE ###
+    The medium size model starts with higher accuracy but when the number of supports increases the two models are about the same accuracy.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_1_bii
+
+\LARGE
+1.c
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_1_c
+\begin{answer}
+    % ### START CODE HERE ###
+    11200000 * 4 bytes = 44800000 bytes = 44.8 Megabytes
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_1_c
+
+\LARGE
+1.d
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_1_d
+\begin{answer}
+    % ### START CODE HERE ###
+    540000000000 * 4 bytes = 2.16 * $10^{12}$ = 2.16 Terabytes
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_1_d
+
+\clearpage
+
+\LARGE
+2.b (ii)
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_2_bii
+\begin{answer}
+    % ### START CODE HERE ###
+    With a small number of few shot examples the medium and full models perform similarly. As the number of shots increase the full model does slightly better but the medium model does worse.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_2_bii
+
+\LARGE
+2.c (ii)
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_2_cii
+\begin{answer}
+    % ### START CODE HERE ###
+    \begin{center}
+        \includegraphics*[width=1.0\textwidth]{q2_xsum_plot}
+    \end{center}
+    The TL;DR: prompt does better than no prompt formatting.
+
+    My custom prompt format was to make a symbol !> that represents summarize with the idea that it would trigger the summarize behavior. 
+    Overall the custom prompt format performed worse than the TL;DR: format.  
+
+    In the zero shot context TL;DR does better than the other two formats. 
+    The custom format does the worst and this could be because the custom symbol doesn't appear in the dataset.
+
+    In the one shot context TL;DR again does the best but the custom format does better than the no prompt format.
+
+    In the 4 shot context TL;DR stays the best and both the custom and no prompt formats do better as well. 
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_2_cii
+
+\clearpage
+
+\LARGE
+3.b
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_3_b
+\begin{answer}
+    % ### START CODE HERE ###
+    If the full matrix is d1 x d2 then the savings is (d1 - p) * (d2 - p) parameters.
+
+    The greatest savings are when the p is rank 1 reducing the A and B matricies to vectors of size d1 x 1 and d2 x 1. 
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3_b
+
+\LARGE
+3.d (ii)
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_3_dii
+\begin{answer}
+    % ### START CODE HERE ###
+    The LoRAs perform on par or better than finetuning the first and last layers.  
+
+    Comparing the LoRAs and finetuning the middle layers, as the number of support examples gets larger the LoRAs perform just as well as finetuning the middle layers.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3_dii
+
+\clearpage
+
+\LARGE
+4.a
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_4_a
+\begin{answer}
+    % ### START CODE HERE ###
+    In-Context learning performs better when there are a small amount of support examples. 
+    
+    Fine-tuning performs better with more examples.
+
+    This show that in-context learning is limited to rare examples where getting more data is not feasible. 
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_4_a
+
+\LARGE
+4.b
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_4_b
+\begin{answer}
+    % ### START CODE HERE ###
+    The value from the evals is 0.664. 
+
+    In-context learning has a higher standard deviation.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_4_b
+
+\LARGE
+4.c
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_4_c
+\begin{answer}
+    % ### START CODE HERE ###
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_4_c
+
+% <SCPD_SUBMISSION_TAG>_entire_submission
+
+\end{document}

@@ -1,0 +1,86 @@
+% This contents of this file will be inserted into the _Solutions version of the
+% output tex document.  Here's an example:
+
+% If assignment with subquestion (1.a) requires a written response, you will
+% find the following flag within this document: <SCPD_SUBMISSION_TAG>_1a
+% In this example, you would insert the LaTeX for your solution to (1.a) between
+% the <SCPD_SUBMISSION_TAG>_1a flags.  If you also constrain your answer between the
+% START_CODE_HERE and END_CODE_HERE flags, your LaTeX will be styled as a
+% solution within the final document.
+
+% Please do not use the '<SCPD_SUBMISSION_TAG>' character anywhere within your code.  As expected,
+% that will confuse the regular expressions we use to identify your solution.
+\def\assignmentnum{1 }
+\def\assignmenttitle{XCS330 Problem Set \assignmentnum}
+\input{macros}
+\begin{document}
+\pagestyle{myheadings} \markboth{}{\assignmenttitle}
+
+% <SCPD_SUBMISSION_TAG>_entire_submission
+
+This handout includes space for every question that requires a written response.
+Please feel free to use it to handwrite your solutions (legibly, please).  If
+you choose to typeset your solutions, the |README.md| for this assignment includes
+instructions to regenerate this handout with your typeset \LaTeX{} solutions.
+\ruleskip
+
+\LARGE
+3.a
+\normalsize
+% <SCPD_SUBMISSION_TAG>_3a
+\begin{answer}
+    % ### START CODE HERE ###
+	\begin{center}
+		\includegraphics[width=1.0\textwidth]{LF99LR01}
+	\end{center}
+	Based on the train/test loss curves, parameter sharing does not outperform having separate models. \\
+	Looking at the curves we see that the separate models model has a similar MSE for both eval and training implying that both parameter sharing and separate models performed equally on the regression task. \\
+	The factorization and joint loss are lower and the Mean Reciprocal Rank is higher for the separate models model, impyling that the separate models model was more likely to recommend movies the user has seen than the shared parameters model.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3a
+
+\clearpage
+
+\LARGE
+3.b
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_3b
+\begin{answer}
+    % ### START CODE HERE ###
+	\begin{center}
+		\includegraphics[width=1.0\textwidth]{LF05LR05}
+	\end{center}
+	Based on the train/test loss curves, parameter sharing does not outperform having separate models once again. \\
+	First looking at the Joint Loss and MSE, parameter sharing and separate models look to produce similar results. \\
+	However, when looking at Factorization loss we see that separate models is significantly lower. \\
+	And when looking at the Mean Reciprical Rank we see once again that separate models is higher.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3b
+
+\clearpage
+
+\LARGE
+3.c
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_3c
+\begin{answer}
+    % ### START CODE HERE ###
+	\begin{center}
+		\includegraphics[width=1.0\textwidth]{SharedModelDifference}
+	\end{center}
+	Comparing the two shared models we see that they have similar performance on MSE loss. \\
+	However, when comparing the Factorization and Joint Loss as well as the Mean Reciprocal Rank we see that the model with $\lambda_{F}$ = 0.99 $\lambda_{R} = 0.01$ converges faster. \\
+	This performance difference makes sense as the model with $\lambda_{F}$ = 0.99 $\lambda_{R}$ = 0.01 is weighted in favor of the factorization task. \\
+	Why does weighing the model in favor of the factorization task generate better results? \\
+	I'm not entirely certain, but my best guess / intuition is that the factorization task is a more complicated task than the regression task and so the benefit of weighting in favor of the factorization task has a greater return than the performance drop in the regression task. This also seems like a good place to perform tuning to find the best "balance" between these parameters.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3c
+
+% <SCPD_SUBMISSION_TAG>_entire_submission
+
+\end{document}

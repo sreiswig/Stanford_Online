@@ -1,0 +1,6 @@
+Namespace(log_dir='logs/protonet/omniglot.way_5.support_1.query_15.lr_0.001.batch_size_16', num_way=5, num_support=1, num_query=15, learning_rate=0.001, batch_size=16, num_train_iterations=5000, test=True, checkpoint_step=4900, num_workers=2, compile=None, backend='inductor', cache=False, device='cpu')
+Using device:  cpu
+log_dir: logs/protonet/omniglot.way_5.support_1.query_15.lr_0.001.batch_size_16
+Loaded checkpoint iteration 4900.
+Testing on tasks with composition num_way=5, num_support=1, num_query=15
+Accuracy over 600 test tasks: mean 0.980, 95% confidence interval 0.002
