@@ -23,6 +23,9 @@ def distinct_words(corpus):
     num_corpus_words = 0
 
     # ### START CODE HERE ###
+    corpus_words = [word for doc in corpus for word in doc]
+    corpus_words = set(corpus_words)
+    num_corpus_words = len(corpus_words)
     # ### END CODE HERE ###
 
     return corpus_words, num_corpus_words
