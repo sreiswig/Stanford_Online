@@ -53,6 +53,7 @@ def compute_co_occurrence_matrix(corpus, window_size=4):
     word2Ind = {}
 
     # ### START CODE HERE ###
+    M = np.ndarray((num_words, num_words), dtype=int) 
     # ### END CODE HERE ###
 
     return M, word2Ind
