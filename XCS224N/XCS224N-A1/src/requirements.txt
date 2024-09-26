@@ -1,0 +1,13 @@
+torch
+numpy
+scipy
+scikit-learn
+matplotlib
+tqdm
+docopt
+notebook
+tensorboard
+sentencepiece
+sacrebleu
+nltk
+timeout_decorator
