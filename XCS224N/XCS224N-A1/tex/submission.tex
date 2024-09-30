@@ -32,6 +32,40 @@ instructions to regenerate this handout with your typeset \LaTeX{} solutions.
 % <SCPD_SUBMISSION_TAG>_4a
 \begin{answer}
   % ### START CODE HERE ###
+  \[ \mathbf{A} = \sum_{i=1}^{r}\sigma_{i}\mathbf{u}_{i}\mathbf{v}^{T}_{i} \]
+\[ \mathbf{A} = \mathbf{U}\mathbf{D}\mathbf{V}^{T} \]
+\[ \mathbf{U}\mathbf{D}\mathbf{V}^{T} = 
+\begin{bmatrix} 
+    u_1 & u_2 & \dots & u_r 
+\end{bmatrix} 
+\begin{bmatrix} 
+    \sigma_1 & 0 & \dots & 0 \\
+    0 & \sigma_2 & \dots & 0 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & \dots & \sigma_r
+\end{bmatrix}
+\begin{bmatrix}
+    v_1^T \\ v_2^T \\ \vdots \\ v_r^T
+\end{bmatrix}
+\]
+By Matrix multiplication of the left two matrices we have:
+\[
+\mathbf{U}\mathbf{D}\mathbf{V}^{T} = 
+\begin{bmatrix}
+    u_1\sigma_1 & u_2\sigma_2 & \dots & u_r\sigma_r
+\end{bmatrix}
+\begin{bmatrix}
+    v_1^T \\ v_2^T \\ \vdots \\ v_r^T
+\end{bmatrix}
+\]
+By Matrix multiplication:
+\[
+\mathbf{U}\mathbf{D}\mathbf{V}^{T} = u_1\sigma_1v_1^T + u_2\sigma_2v_2^T + \dots + u_r\sigma_rv_r^T
+\]
+Simplifying:
+\[
+\mathbf{U}\mathbf{D}\mathbf{V}^{T} = \sum_{i=1}^{r}\sigma_{i}\mathbf{u}_{i}\mathbf{v}^{T}_{i}
+\]
   % ### END CODE HERE ###
 \end{answer}
 % <SCPD_SUBMISSION_TAG>_4a
