@@ -58,14 +58,14 @@ def compute_co_occurrence_matrix(corpus, window_size=4):
     M = np.zeros(shape=(num_words, num_words))
     for document in corpus:
         for idx in range(len(document)):
-            for jdx in range(1, window_size):
-                if idx + jdx >= len(document):
-                    break
-                else:
-                    x = word2Ind[document[idx]]
+            for jdx in range(1, window_size+1):
+                x = word2Ind[document[idx]]
+                if idx + jdx < len(document):
                     y = word2Ind[document[idx+jdx]]
                     M[x][y] = M[x][y] + 1
-                    M[y][x] = M[y][x] + 1
+                if idx - jdx >= 0:
+                    y = word2Ind[document[idx-jdx]]
+                    M[x][y] = M[x][y] + 1
     # ### END CODE HERE ###
 
     return M, word2Ind
@@ -88,6 +88,8 @@ def reduce_to_k_dim(M, k=2):
     print("Running Truncated SVD over %i words..." % (M.shape[0]))
 
     # ### START CODE HERE ###
+    svd = TruncatedSVD(n_components=k, n_iter=n_iter)
+    M_reduced = svd.fit_transform(M)
     # ### END CODE HERE ###
 
     print("Done.")
