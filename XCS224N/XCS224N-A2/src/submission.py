@@ -27,6 +27,7 @@ def sigmoid(x):
   """
 
   ### START CODE HERE
+  s = 1 / (1 + np.exp(-x))
   ### END CODE HERE
 
   return s
@@ -66,6 +67,9 @@ def naive_softmax_loss_and_gradient(center_word_vec,outside_word_idx,outside_vec
   ### to integer overflow.
   
   ### START CODE HERE
+  loss = softmax(center_word_vec)
+  grad_center_vec = None
+  grad_outside_vecs = None
   ### END CODE HERE
 
   return loss, grad_center_vec, grad_outside_vecs
