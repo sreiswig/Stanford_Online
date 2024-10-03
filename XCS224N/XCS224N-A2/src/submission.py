@@ -67,14 +67,14 @@ def naive_softmax_loss_and_gradient(center_word_vec,outside_word_idx,outside_vec
   ### to integer overflow.
   
   ### START CODE HERE
-  print(center_word_vec)
-  print(center_word_vec.shape)
-  print(outside_word_idx)
-  print(outside_vectors)
-  print(outside_vectors.shape)
+  print(f"Center word vector {center_word_vec}")
+  print(f"Center word shape {center_word_vec.shape}")
+  print(f"Outside word index {outside_word_idx}")
+  print(f"Outside vectors {outside_vectors}")
+  print(f"Outside vecotrs shape {outside_vectors.shape}")
   y_hat = outside_vectors[outside_word_idx]
-  print(y_hat)
-  print(np.sum(np.log(-1 * y_hat)))
+  print(f"y_hat vector: {y_hat}")
+  print(np.sum(np.log(np.abs(-1 * y_hat))))
   loss = None
   grad_center_vec = None
   grad_outside_vecs = None
