@@ -74,8 +74,8 @@ def naive_softmax_loss_and_gradient(center_word_vec,outside_word_idx,outside_vec
   print(outside_vectors.shape)
   y_hat = outside_vectors[outside_word_idx]
   print(y_hat)
-  print(np.log(y_hat))
-  loss = np.dot(center_word_vec, outside_vectors.T)
+  print(np.sum(np.log(-1 * y_hat)))
+  loss = None
   grad_center_vec = None
   grad_outside_vecs = None
   ### END CODE HERE
