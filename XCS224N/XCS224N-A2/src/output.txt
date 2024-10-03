@@ -37,7 +37,7 @@ Gradient wrt Outside Vectors (dJ/dU):
 
 <class 'AssertionError'>
 False is not true
------ END 2a-0-basic [took 0:00:00.017182 (max allowed 5 seconds), 0/1 points]
+----- END 2a-0-basic [took 0:00:00.044612 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2a-1-basic:  Word2vec sanity check 2
 			naive_softmax_loss_and_gradient			
@@ -46,16 +46,34 @@ Your Result:
 [-0.27323645  0.12538062  0.95374082]
 (3,)
 3
-3
 [[-0.6831809  -0.04200519  0.72904007]
  [ 0.18289107  0.76098587 -0.62245591]
  [-0.61517874  0.5147624  -0.59713884]
  [-0.33867074 -0.80966534 -0.47931635]
  [-0.52629529 -0.78190408  0.33412466]]
 (5, 3)
-<class 'NameError'>
-name 'loss' is not defined
------ END 2a-1-basic [took 0:00:00.000332 (max allowed 5 seconds), 0/1 points]
+[-0.33867074 -0.80966534 -0.47931635]
+[nan nan nan]
+Loss: [ 0.87671856 -0.54822124 -0.3368852  -0.46612272  0.36443577]
+Gradient wrt Center Vector (dJ/dV):
+ None
+Gradient wrt Outside Vectors (dJ/dU):
+ None
+
+Expected Result: Value should approximate these:
+Loss: 2.217424877675181
+Gradient wrt Center Vectors(dJ/dV):
+ [-0.17249875  0.64873661  0.67821423]
+Gradient wrt Outside Vectors (dJ/dU):
+ [[-0.11394933  0.05228819  0.39774391]
+ [-0.02740743  0.01257651  0.09566654]
+ [-0.03385715  0.01553611  0.11817949]
+ [ 0.24348396 -0.11172803 -0.84988879]
+ [-0.06827005  0.03132723  0.23829885]]
+
+<class 'AssertionError'>
+False is not true
+----- END 2a-1-basic [took 0:00:00.002807 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2a-2-basic:  Word2vec sanity check 3
 			test sigmoid			
@@ -66,22 +84,21 @@ Your Result:
 Expected Result: Value should approximate these:
 [0.38553435 0.29385824 0.63372281 0.40988622 0.29385824 0.5834337
  0.29385824 0.5834337  0.40988622 0.40988622 0.63372281]
------ END 2a-2-basic [took 0:00:00.000149 (max allowed 5 seconds), 1/1 points]
+----- END 2a-2-basic [took 0:00:00.000378 (max allowed 5 seconds), 1/1 points]
 
 ----- START 2a-3-hidden:  Sigmoid with 1D inputs
------ END 2a-3-hidden [took 0:00:00.000045 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
+----- END 2a-3-hidden [took 0:00:00.000103 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2a-4-hidden: Sigmoid with 2D inputs
------ END 2a-4-hidden [took 0:00:00.000039 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
+----- END 2a-4-hidden [took 0:00:00.000083 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2a-5-hidden:  Sigmoid with large 2D inputs
------ END 2a-5-hidden [took 0:00:00.023691 (max allowed 15 seconds), ???/2 points] (hidden test ungraded)
+----- END 2a-5-hidden [took 0:00:00.047754 (max allowed 15 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 2a-6-hidden:  test softmax
 [0.09994668 0.06520189 0.80159595 0.33518229 0.2672875  0.29135906
  0.57311291 0.38634029 0.94882622 0.84555872]
 (10,)
-2
 2
 [[0.83928539 0.14763237 0.29940466 0.89561677 0.58232109 0.25767429
   0.87352972 0.71117927 0.66086134 0.04100899]
@@ -114,47 +131,90 @@ Expected Result: Value should approximate these:
  [0.67760902 0.64718308 0.7506539  0.80750967 0.58756577 0.09594494
   0.37021367 0.96878971 0.11473984 0.09688503]]
 (15, 10)
-<class 'NameError'>
-name 'loss' is not defined
------ END 2a-6-hidden [took 0:00:00.001215 (max allowed 10 seconds), ???/2 points] (hidden test ungraded)
+[0.03994089 0.59398879 0.41892132 0.55725661 0.51058319 0.2298476
+ 0.81795776 0.11347699 0.62789422 0.51727024]
+[-3.22035467 -0.52089482 -0.87007216 -0.58472945 -0.6722017  -1.4703388
+ -0.20094458 -2.17615517 -0.46538357 -0.65918984]
+[0.09994668 0.06520189 0.80159595 0.33518229 0.2672875  0.29135906
+ 0.57311291 0.38634029 0.94882622 0.84555872]
+(10,)
+2
+[[0.83928539 0.14763237 0.29940466 0.89561677 0.58232109 0.25767429
+  0.87352972 0.71117927 0.66086134 0.04100899]
+ [0.11159344 0.07443467 0.38663138 0.51422617 0.6643822  0.19424897
+  0.08012803 0.85729669 0.79588067 0.02532956]
+ [0.03994089 0.59398879 0.41892132 0.55725661 0.51058319 0.2298476
+  0.81795776 0.11347699 0.62789422 0.51727024]
+ [0.7209387  0.67626322 0.21678331 0.54096587 0.62092373 0.12977383
+  0.99816084 0.53654555 0.94673007 0.41594366]
+ [0.11937144 0.71549933 0.58610895 0.32022079 0.88052008 0.76551265
+  0.20050563 0.29511218 0.05523627 0.62376423]
+ [0.39791195 0.70609201 0.89159298 0.5196628  0.43937491 0.25954044
+  0.19457188 0.82277001 0.28191435 0.39429882]
+ [0.10531077 0.68721206 0.01329883 0.84365563 0.53762768 0.83195555
+  0.68907667 0.53445882 0.82851678 0.69110953]
+ [0.97084082 0.09369714 0.53433532 0.01611019 0.55094778 0.37068435
+  0.98619668 0.72583036 0.88710097 0.47186327]
+ [0.16795399 0.26064098 0.73354346 0.74883833 0.59714121 0.09649499
+  0.47122998 0.81205586 0.95286352 0.30053233]
+ [0.09541628 0.67818218 0.49754225 0.88701574 0.78006152 0.51808434
+  0.67215619 0.87285834 0.1319803  0.22233955]
+ [0.06320891 0.095867   0.03548227 0.78727731 0.98996795 0.76386908
+  0.75800789 0.87864007 0.95396787 0.65853174]
+ [0.68524846 0.08660797 0.29508299 0.44093999 0.78816595 0.27986413
+  0.60629383 0.41897854 0.73612821 0.61612884]
+ [0.87524563 0.02604318 0.99333286 0.37869766 0.00131623 0.86741494
+  0.41991695 0.74748763 0.89884308 0.7515152 ]
+ [0.36551398 0.30601259 0.99640239 0.0538855  0.48971569 0.78924658
+  0.69595544 0.31350103 0.63071906 0.96302355]
+ [0.67760902 0.64718308 0.7506539  0.80750967 0.58756577 0.09594494
+  0.37021367 0.96878971 0.11473984 0.09688503]]
+(15, 10)
+[0.03994089 0.59398879 0.41892132 0.55725661 0.51058319 0.2298476
+ 0.81795776 0.11347699 0.62789422 0.51727024]
+[-3.22035467 -0.52089482 -0.87007216 -0.58472945 -0.6722017  -1.4703388
+ -0.20094458 -2.17615517 -0.46538357 -0.65918984]
+<class 'TypeError'>
+ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+----- END 2a-6-hidden [took 0:00:00.003589 (max allowed 10 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 2a-7-hidden:  test skipgram
------ END 2a-7-hidden [took 0:00:00.000227 (max allowed 10 seconds), ???/3 points] (hidden test ungraded)
+----- END 2a-7-hidden [took 0:00:00.000271 (max allowed 10 seconds), ???/3 points] (hidden test ungraded)
 
 ----- START 2b-0-basic:  SGD sanity check 1
 <class 'TypeError'>
 must be real number, not NoneType
------ END 2b-0-basic [took 0:00:00.000148 (max allowed 5 seconds), 0/0.5 points]
+----- END 2b-0-basic [took 0:00:00.000257 (max allowed 5 seconds), 0/0.5 points]
 
 ----- START 2b-1-basic:  SGD sanity check 2
 <class 'TypeError'>
 must be real number, not NoneType
------ END 2b-1-basic [took 0:00:00.000130 (max allowed 5 seconds), 0/0.5 points]
+----- END 2b-1-basic [took 0:00:00.000192 (max allowed 5 seconds), 0/0.5 points]
 
 ----- START 2b-2-basic:  SGD sanity check 3
 <class 'TypeError'>
 must be real number, not NoneType
------ END 2b-2-basic [took 0:00:00.000126 (max allowed 5 seconds), 0/1 points]
+----- END 2b-2-basic [took 0:00:00.000248 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2b-3-hidden:  sgd quad scalar
 <class 'AssertionError'>
 False is not true
------ END 2b-3-hidden [took 0:00:00.000320 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 2b-3-hidden [took 0:00:00.000484 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2b-4-hidden:  sgd quad matrix
 <class 'AssertionError'>
 False is not true
------ END 2b-4-hidden [took 0:00:00.000502 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 2b-4-hidden [took 0:00:00.000867 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2c-0-basic:  Sanity check for word2vec implementation
 <class 'Exception'>
 Excecute run.py to generate sample_vectors_(soln).json
------ END 2c-0-basic [took 0:00:00.000187 (max allowed 5 seconds), 0/1 points]
+----- END 2c-0-basic [took 0:00:00.000258 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2c-1-hidden:  Compare word vector outputs (sample_vectors_soln.json) with solution.
 <class 'AssertionError'>
 False is not true : Cannot run unit test because word vector file is not present.  It must be uploaded with your submission.py file.  Execute src/run.py to create the word vector file (sample_vectors_soln.json).
------ END 2c-1-hidden [took 0:00:00.000124 (max allowed 300 seconds), ???/3 points] (hidden test ungraded)
+----- END 2c-1-hidden [took 0:00:00.000165 (max allowed 300 seconds), ???/3 points] (hidden test ungraded)
 
 Note that the hidden test cases do not check for correctness.
 They are provided for you to verify that the functions do not crash and run within the time limit.
