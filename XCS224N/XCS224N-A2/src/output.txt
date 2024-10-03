@@ -37,7 +37,7 @@ Gradient wrt Outside Vectors (dJ/dU):
 
 <class 'AssertionError'>
 False is not true
------ END 2a-0-basic [took 0:00:00.044612 (max allowed 5 seconds), 0/1 points]
+----- END 2a-0-basic [took 0:00:00.042355 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2a-1-basic:  Word2vec sanity check 2
 			naive_softmax_loss_and_gradient			
@@ -73,7 +73,7 @@ Gradient wrt Outside Vectors (dJ/dU):
 
 <class 'AssertionError'>
 False is not true
------ END 2a-1-basic [took 0:00:00.002807 (max allowed 5 seconds), 0/1 points]
+----- END 2a-1-basic [took 0:00:00.002711 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2a-2-basic:  Word2vec sanity check 3
 			test sigmoid			
@@ -84,16 +84,16 @@ Your Result:
 Expected Result: Value should approximate these:
 [0.38553435 0.29385824 0.63372281 0.40988622 0.29385824 0.5834337
  0.29385824 0.5834337  0.40988622 0.40988622 0.63372281]
------ END 2a-2-basic [took 0:00:00.000378 (max allowed 5 seconds), 1/1 points]
+----- END 2a-2-basic [took 0:00:00.000337 (max allowed 5 seconds), 1/1 points]
 
 ----- START 2a-3-hidden:  Sigmoid with 1D inputs
------ END 2a-3-hidden [took 0:00:00.000103 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
+----- END 2a-3-hidden [took 0:00:00.000097 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2a-4-hidden: Sigmoid with 2D inputs
 ----- END 2a-4-hidden [took 0:00:00.000083 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2a-5-hidden:  Sigmoid with large 2D inputs
------ END 2a-5-hidden [took 0:00:00.047754 (max allowed 15 seconds), ???/2 points] (hidden test ungraded)
+----- END 2a-5-hidden [took 0:00:00.041573 (max allowed 15 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 2a-6-hidden:  test softmax
 [0.09994668 0.06520189 0.80159595 0.33518229 0.2672875  0.29135906
@@ -176,45 +176,45 @@ Expected Result: Value should approximate these:
  -0.20094458 -2.17615517 -0.46538357 -0.65918984]
 <class 'TypeError'>
 ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
------ END 2a-6-hidden [took 0:00:00.003589 (max allowed 10 seconds), ???/2 points] (hidden test ungraded)
+----- END 2a-6-hidden [took 0:00:00.003734 (max allowed 10 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 2a-7-hidden:  test skipgram
------ END 2a-7-hidden [took 0:00:00.000271 (max allowed 10 seconds), ???/3 points] (hidden test ungraded)
+----- END 2a-7-hidden [took 0:00:00.000276 (max allowed 10 seconds), ???/3 points] (hidden test ungraded)
 
 ----- START 2b-0-basic:  SGD sanity check 1
 <class 'TypeError'>
 must be real number, not NoneType
------ END 2b-0-basic [took 0:00:00.000257 (max allowed 5 seconds), 0/0.5 points]
+----- END 2b-0-basic [took 0:00:00.000234 (max allowed 5 seconds), 0/0.5 points]
 
 ----- START 2b-1-basic:  SGD sanity check 2
 <class 'TypeError'>
 must be real number, not NoneType
------ END 2b-1-basic [took 0:00:00.000192 (max allowed 5 seconds), 0/0.5 points]
+----- END 2b-1-basic [took 0:00:00.000188 (max allowed 5 seconds), 0/0.5 points]
 
 ----- START 2b-2-basic:  SGD sanity check 3
 <class 'TypeError'>
 must be real number, not NoneType
------ END 2b-2-basic [took 0:00:00.000248 (max allowed 5 seconds), 0/1 points]
+----- END 2b-2-basic [took 0:00:00.000257 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2b-3-hidden:  sgd quad scalar
 <class 'AssertionError'>
 False is not true
------ END 2b-3-hidden [took 0:00:00.000484 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 2b-3-hidden [took 0:00:00.000447 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2b-4-hidden:  sgd quad matrix
 <class 'AssertionError'>
 False is not true
------ END 2b-4-hidden [took 0:00:00.000867 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 2b-4-hidden [took 0:00:00.000843 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2c-0-basic:  Sanity check for word2vec implementation
 <class 'Exception'>
 Excecute run.py to generate sample_vectors_(soln).json
------ END 2c-0-basic [took 0:00:00.000258 (max allowed 5 seconds), 0/1 points]
+----- END 2c-0-basic [took 0:00:00.000290 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2c-1-hidden:  Compare word vector outputs (sample_vectors_soln.json) with solution.
 <class 'AssertionError'>
 False is not true : Cannot run unit test because word vector file is not present.  It must be uploaded with your submission.py file.  Execute src/run.py to create the word vector file (sample_vectors_soln.json).
------ END 2c-1-hidden [took 0:00:00.000165 (max allowed 300 seconds), ???/3 points] (hidden test ungraded)
+----- END 2c-1-hidden [took 0:00:00.000169 (max allowed 300 seconds), ???/3 points] (hidden test ungraded)
 
 Note that the hidden test cases do not check for correctness.
 They are provided for you to verify that the functions do not crash and run within the time limit.
