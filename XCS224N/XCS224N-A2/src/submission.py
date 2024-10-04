@@ -67,17 +67,12 @@ def naive_softmax_loss_and_gradient(center_word_vec,outside_word_idx,outside_vec
   ### to integer overflow.
   
   ### START CODE HERE
-  print(f"Center word vector {center_word_vec}")
-  print(f"Center word shape {center_word_vec.shape}")
-  print(f"Outside word index {outside_word_idx}")
-  print(f"Outside vectors {outside_vectors}")
-  print(f"Outside vecotrs shape {outside_vectors.shape}")
-  y_hat = outside_vectors[outside_word_idx]
-  print(f"y_hat vector: {y_hat}")
-  print(np.sum(np.log(np.abs(-1 * y_hat))))
-  loss = None
-  grad_center_vec = None
-  grad_outside_vecs = None
+  logits = np.dot(outside_vectors, center_word_vec)
+  y_hat = softmax(logits)
+  loss = -1 * np.log(y_hat[outside_word_idx])
+  y_hat[outside_word_idx] = y_hat[outside_word_idx] - 1
+  grad_center_vec = np.dot(outside_vectors.T, y_hat)
+  grad_outside_vecs = np.outer(y_hat, center_word_vec)
   ### END CODE HERE
 
   return loss, grad_center_vec, grad_outside_vecs
@@ -156,6 +151,13 @@ def skipgram(current_center_word, window_size, outside_words, word2ind, center_w
   grad_outside_vectors = np.zeros(outside_vectors.shape)
 
   ### START CODE HERE
+  center_word_idx = word2ind[current_center_word]
+  for word in outside_words:
+      outside_word_idx = word2ind[word]
+      loss_current, grad_c, grad_o = naive_softmax_loss_and_gradient(center_word_vectors[center_word_idx], outside_word_idx, outside_vectors, dataset)
+      loss = loss + loss_current
+      grad_center_vecs[center_word_idx] = grad_center_vecs[center_word_idx] + grad_c
+      grad_outside_vectors = grad_outside_vectors + grad_o
   ### END CODE HERE
 
   return loss, grad_center_vecs, grad_outside_vectors
