@@ -35,7 +35,7 @@ Gradient wrt Outside Vectors (dJ/dU):
  [ 0.09472154 -0.04346509 -0.33062865]
  [-0.13638384  0.06258276  0.47605228]]
 
------ END 2a-0-basic [took 0:00:00.168042 (max allowed 5 seconds), 1/1 points]
+----- END 2a-0-basic [took 0:00:00.166731 (max allowed 5 seconds), 1/1 points]
 
 ----- START 2a-1-basic:  Word2vec sanity check 2
 			naive_softmax_loss_and_gradient			
@@ -62,7 +62,7 @@ Gradient wrt Outside Vectors (dJ/dU):
  [ 0.24348396 -0.11172803 -0.84988879]
  [-0.06827005  0.03132723  0.23829885]]
 
------ END 2a-1-basic [took 0:00:00.000321 (max allowed 5 seconds), 1/1 points]
+----- END 2a-1-basic [took 0:00:00.000302 (max allowed 5 seconds), 1/1 points]
 
 ----- START 2a-2-basic:  Word2vec sanity check 3
 			test sigmoid			
@@ -73,22 +73,22 @@ Your Result:
 Expected Result: Value should approximate these:
 [0.38553435 0.29385824 0.63372281 0.40988622 0.29385824 0.5834337
  0.29385824 0.5834337  0.40988622 0.40988622 0.63372281]
------ END 2a-2-basic [took 0:00:00.000127 (max allowed 5 seconds), 1/1 points]
+----- END 2a-2-basic [took 0:00:00.000122 (max allowed 5 seconds), 1/1 points]
 
 ----- START 2a-3-hidden:  Sigmoid with 1D inputs
------ END 2a-3-hidden [took 0:00:00.000043 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
+----- END 2a-3-hidden [took 0:00:00.000045 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2a-4-hidden: Sigmoid with 2D inputs
------ END 2a-4-hidden [took 0:00:00.000035 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
+----- END 2a-4-hidden [took 0:00:00.000036 (max allowed 15 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2a-5-hidden:  Sigmoid with large 2D inputs
------ END 2a-5-hidden [took 0:00:00.020915 (max allowed 15 seconds), ???/2 points] (hidden test ungraded)
+----- END 2a-5-hidden [took 0:00:00.021164 (max allowed 15 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 2a-6-hidden:  test softmax
------ END 2a-6-hidden [took 0:00:00.000232 (max allowed 10 seconds), ???/2 points] (hidden test ungraded)
+----- END 2a-6-hidden [took 0:00:00.000225 (max allowed 10 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 2a-7-hidden:  test skipgram
------ END 2a-7-hidden [took 0:00:00.000210 (max allowed 10 seconds), ???/3 points] (hidden test ungraded)
+----- END 2a-7-hidden [took 0:00:00.000213 (max allowed 10 seconds), ???/3 points] (hidden test ungraded)
 
 ----- START 2b-0-basic:  SGD sanity check 1
 iter 100: 0.004578
@@ -102,7 +102,7 @@ iter 800: 0.003200
 iter 900: 0.003040
 iter 1000: 0.002888
 test 1 result: 8.414836786079764e-10
------ END 2b-0-basic [took 0:00:00.001805 (max allowed 5 seconds), 0.5/0.5 points]
+----- END 2b-0-basic [took 0:00:00.001798 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 2b-1-basic:  SGD sanity check 2
 iter 100: 0.000000
@@ -116,7 +116,7 @@ iter 800: 0.000000
 iter 900: 0.000000
 iter 1000: 0.000000
 test 2 result: 0.0
------ END 2b-1-basic [took 0:00:00.001782 (max allowed 5 seconds), 0.5/0.5 points]
+----- END 2b-1-basic [took 0:00:00.001774 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 2b-2-basic:  SGD sanity check 3
 iter 100: 0.041205
@@ -130,33 +130,25 @@ iter 800: 0.028802
 iter 900: 0.027362
 iter 1000: 0.025994
 test 3 result: -2.524451035823933e-09
------ END 2b-2-basic [took 0:00:00.001809 (max allowed 5 seconds), 1/1 points]
+----- END 2b-2-basic [took 0:00:00.001769 (max allowed 5 seconds), 1/1 points]
 
 ----- START 2b-3-hidden:  sgd quad scalar
------ END 2b-3-hidden [took 0:00:00.001821 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 2b-3-hidden [took 0:00:00.001774 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2b-4-hidden:  sgd quad matrix
------ END 2b-4-hidden [took 0:00:00.009927 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 2b-4-hidden [took 0:00:00.009872 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 2c-0-basic:  Sanity check for word2vec implementation
-Your output:
-[0.6029723815239836, 0.1678931853672474, 0.2252008730596756, -0.28873306487925615, -0.914615719505456, -0.2206997036383445, 0.2238454978107193, -0.27169214724889124, 0.6634932978039563, 0.23203231101065191]
-Expected output
-[0.6029723815239835, 0.16789318536724746, 0.22520087305967568, -0.2887330648792561, -0.914615719505456, -0.2206997036383445, 0.2238454978107194, -0.27169214724889107, 0.6634932978039564, 0.2320323110106518]
-
-Your output:
-[0.5641256072125872, 0.13722982658305447, 0.20823648035171755, -0.2929695723456364, -0.8704480862547579, -0.18822962799771015, 0.24239616047158682, -0.2941009195992256, 0.697964465599171, 0.21475297647656125]
-Expected output
-[0.5641256072125872, 0.13722982658305444, 0.2082364803517175, -0.2929695723456364, -0.8704480862547578, -0.18822962799771015, 0.24239616047158674, -0.29410091959922546, 0.6979644655991716, 0.2147529764765611]
-
------ END 2c-0-basic [took 0:00:00.000228 (max allowed 5 seconds), 1/1 points]
+<class 'Exception'>
+Excecute run.py to generate sample_vectors_(soln).json
+----- END 2c-0-basic [took 0:00:00.000347 (max allowed 5 seconds), 0/1 points]
 
 ----- START 2c-1-hidden:  Compare word vector outputs (sample_vectors_soln.json) with solution.
-<class 'FileNotFoundError'>
-[Errno 2] No such file or directory: 'sample_vectors_(soln)_compare.json'
------ END 2c-1-hidden [took 0:00:00.000333 (max allowed 300 seconds), ???/3 points] (hidden test ungraded)
+<class 'AssertionError'>
+False is not true : Cannot run unit test because word vector file is not present.  It must be uploaded with your submission.py file.  Execute src/run.py to create the word vector file (sample_vectors_soln.json).
+----- END 2c-1-hidden [took 0:00:00.000078 (max allowed 300 seconds), ???/3 points] (hidden test ungraded)
 
 Note that the hidden test cases do not check for correctness.
 They are provided for you to verify that the functions do not crash and run within the time limit.
 Points for these parts not assigned by the grader unless the solution is present (indicated by "???").
-========== END GRADING [6.0/6.0 points + 0/0 extra credit]
+========== END GRADING [5.0/6.0 points + 0/0 extra credit]

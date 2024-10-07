@@ -154,7 +154,7 @@ def skipgram(current_center_word, window_size, outside_words, word2ind, center_w
   center_word_idx = word2ind[current_center_word]
   for word in outside_words:
       outside_word_idx = word2ind[word]
-      loss_current, grad_c, grad_o = naive_softmax_loss_and_gradient(center_word_vectors[center_word_idx], outside_word_idx, outside_vectors, dataset)
+      loss_current, grad_c, grad_o = word2vec_loss_and_gradient(center_word_vectors[center_word_idx], outside_word_idx, outside_vectors, dataset)
       loss = loss + loss_current
       grad_center_vecs[center_word_idx] = grad_center_vecs[center_word_idx] + grad_c
       grad_outside_vectors = grad_outside_vectors + grad_o
