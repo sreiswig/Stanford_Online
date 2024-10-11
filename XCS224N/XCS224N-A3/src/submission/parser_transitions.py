@@ -38,12 +38,12 @@ class PartialParse(object):
         if transition == "S":
             word = self.buffer.pop(0)
             self.stack.append(word)
-        elif transition == "LA":
+        if transition == "LA":
             first = self.stack[-1]
             second = self.stack[-2]
             self.dependencies.append((first, second))
             self.stack.remove(second)
-        else:
+        if transition == "RA":
             first = self.stack.pop()
             second = self.stack[-1]
             self.dependencies.append((second, first))
