@@ -1,0 +1,129 @@
+========== START GRADING
+----- START 1a-0-basic:  Sanity check for PartialParse.parse_step
+SHIFT test passed!
+LEFT-ARC test passed!
+RIGHT-ARC test passed!
+----- END 1a-0-basic [took 0:00:00.000022 (max allowed 5 seconds), 0.1/0.1 points]
+
+----- START 1a-1-basic:  Sanity check for PartialParse.parse
+<class 'IndexError'>
+pop from empty list
+----- END 1a-1-basic [took 0:00:00.000325 (max allowed 5 seconds), 0/0.1 points]
+
+----- START 1a-2-hidden:  init
+----- END 1a-2-hidden [took 0:00:00.000012 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
+
+----- START 1a-3-hidden:  shift
+----- END 1a-3-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
+
+----- START 1a-4-hidden:  right-arc
+----- END 1a-4-hidden [took 0:00:00.000008 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+
+----- START 1a-5-hidden:  left-arc
+----- END 1a-5-hidden [took 0:00:00.000007 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+
+----- START 1a-6-hidden:  parse
+<class 'IndexError'>
+pop from empty list
+----- END 1a-6-hidden [took 0:00:00.000079 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1b-0-basic:  Sanity check for minibatch_parse
+<class 'NameError'>
+name 'dependencies' is not defined
+----- END 1b-0-basic [took 0:00:00.000077 (max allowed 5 seconds), 0/0.1 points]
+
+----- START 1b-1-hidden: single batch
+<class 'NameError'>
+name 'dependencies' is not defined
+----- END 1b-1-hidden [took 0:00:00.000068 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
+
+----- START 1b-2-hidden: batch_size = 1
+<class 'NameError'>
+name 'dependencies' is not defined
+----- END 1b-2-hidden [took 0:00:00.000065 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+
+----- START 1b-3-hidden: same_lengths
+<class 'NameError'>
+name 'dependencies' is not defined
+----- END 1b-3-hidden [took 0:00:00.000063 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1b-4-hidden: different_lengths
+<class 'NameError'>
+name 'dependencies' is not defined
+----- END 1b-4-hidden [took 0:00:00.000068 (max allowed -1 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1c-0-hidden:  Sanity check for Parser Model
+Loading data...
+took 0.67 seconds
+Building parser...
+took 0.01 seconds
+Loading pretrained embeddings...
+took 0.81 seconds
+Vectorizing data...
+took 0.02 seconds
+Preprocessing training data...
+took 0.36 seconds
+Loading data...
+took 0.79 seconds
+Building parser...
+took 0.01 seconds
+Loading pretrained embeddings...
+took 0.79 seconds
+Vectorizing data...
+took 0.02 seconds
+Preprocessing training data...
+took 0.38 seconds
+<class 'NameError'>
+name 'logits' is not defined
+----- END 1c-0-hidden [took 0:00:02.018642 (max allowed 30 seconds), ???/0.1 points] (hidden test ungraded)
+
+----- START 1c-1-hidden: predict_on_batch
+Loading data...
+took 0.73 seconds
+Building parser...
+took 0.01 seconds
+Loading pretrained embeddings...
+took 0.78 seconds
+Vectorizing data...
+took 0.02 seconds
+Preprocessing training data...
+took 0.38 seconds
+<class 'NameError'>
+name 'logits' is not defined
+----- END 1c-1-hidden [took 0:00:00.043533 (max allowed 30 seconds), ???/2.9 points] (hidden test ungraded)
+
+----- START 1c-2-hidden: uses_xavier
+Loading data...
+took 0.75 seconds
+Building parser...
+took 0.01 seconds
+Loading pretrained embeddings...
+took 0.80 seconds
+Vectorizing data...
+took 0.02 seconds
+Preprocessing training data...
+took 0.41 seconds
+<class 'AttributeError'>
+'ParserModel' object has no attribute 'embed_to_hidden'
+----- END 1c-2-hidden [took 0:00:00.000172 (max allowed 100 seconds), ???/1 points] (hidden test ungraded)
+
+----- START 1c-3-hidden: Complete training and Test Set UAS
+Loading data...
+took 0.69 seconds
+Building parser...
+took 0.01 seconds
+Loading pretrained embeddings...
+took 0.83 seconds
+Vectorizing data...
+took 0.02 seconds
+Preprocessing training data...
+took 0.29 seconds
+Epoch 1 out of 2
+<class 'AttributeError'>
+'float' object has no attribute 'item'
+----- END 1c-3-hidden [took 0:00:00.315776 (max allowed 240 seconds), ???/5 points] (hidden test ungraded)
+
+Note that the hidden test cases do not check for correctness.
+They are provided for you to verify that the functions do not crash and run within the time limit.
+Points for these parts not assigned by the grader unless the solution is present (indicated by "???").
+========== END GRADING [0.1/0.30000000000000004 points + 0/0 extra credit]

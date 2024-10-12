@@ -82,6 +82,11 @@ def minibatch_parse(sentences, model, device, batch_size):
     """
 
     ### START CODE HERE
+    partial_parses = list()
+    unfinished_parses = list()
+    while unfinished_parses:
+        transitions = model.predict(partial_parses)
+        
     ### END CODE HERE
 
     return dependencies
