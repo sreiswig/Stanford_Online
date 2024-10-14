@@ -122,7 +122,7 @@ class ParserModel(nn.Module):
         ###     Embedding Layer: https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html 
         ###     View: https://pytorch.org/docs/stable/tensor_view.html
         ### START CODE HERE (~1-3 Lines)
-        
+        x = self.pretrained_embeddings(t)
         ### END CODE HERE
         return x
 
@@ -158,5 +158,10 @@ class ParserModel(nn.Module):
         ### Please see the following docs for support:
         ###     ReLU: https://pytorch.org/docs/stable/generated/torch.nn.functional.relu.html#torch.nn.functional.relu 
         ###  START CODE HERE (~3-5 lines)
+        embeddings = self.embedding_lookup(t)
+        x = self.embed_to_hidden(embeddings)
+        hidden_units = F.ReLU(x)
+        x = self.dropout(hidden_units)
+        logits = self.hidden_to_logits(x)
         ### END CODE HERE
         return logits
