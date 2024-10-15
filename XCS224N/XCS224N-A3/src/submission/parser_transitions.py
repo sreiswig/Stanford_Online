@@ -94,7 +94,7 @@ def minibatch_parse(sentences, model, device, batch_size):
             batch = unfinished_parses
         else:
             batch = unfinished_parses[:batch_size]
-        transitions = model.predict(batch)
+        transitions = model.predict(batch, device=device)
         for i in range(len(batch)):
             batch[i].parse_step(transitions[i])
         to_remove = []
