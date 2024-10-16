@@ -3,120 +3,120 @@
 SHIFT test passed!
 LEFT-ARC test passed!
 RIGHT-ARC test passed!
------ END 1a-0-basic [took 0:00:00.000056 (max allowed 5 seconds), 0.1/0.1 points]
+----- END 1a-0-basic [took 0:00:00.000020 (max allowed 5 seconds), 0.1/0.1 points]
 
 ----- START 1a-1-basic:  Sanity check for PartialParse.parse
 parse test passed!
------ END 1a-1-basic [took 0:00:00.000033 (max allowed 5 seconds), 0.1/0.1 points]
+----- END 1a-1-basic [took 0:00:00.000015 (max allowed 5 seconds), 0.1/0.1 points]
 
 ----- START 1a-2-hidden:  init
------ END 1a-2-hidden [took 0:00:00.000021 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
+----- END 1a-2-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
 
 ----- START 1a-3-hidden:  shift
------ END 1a-3-hidden [took 0:00:00.000020 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
+----- END 1a-3-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
 
 ----- START 1a-4-hidden:  right-arc
------ END 1a-4-hidden [took 0:00:00.000018 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 1a-4-hidden [took 0:00:00.000008 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1a-5-hidden:  left-arc
------ END 1a-5-hidden [took 0:00:00.000018 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 1a-5-hidden [took 0:00:00.000009 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1a-6-hidden:  parse
------ END 1a-6-hidden [took 0:00:00.000021 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+----- END 1a-6-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1b-0-basic:  Sanity check for minibatch_parse
 <class 'IndexError'>
 list index out of range
------ END 1b-0-basic [took 0:00:00.000851 (max allowed 5 seconds), 0/0.1 points]
+----- END 1b-0-basic [took 0:00:00.000683 (max allowed 5 seconds), 0/0.1 points]
 
 ----- START 1b-1-hidden: single batch
 <class 'IndexError'>
 list index out of range
------ END 1b-1-hidden [took 0:00:00.000269 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
+----- END 1b-1-hidden [took 0:00:00.000108 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
 
 ----- START 1b-2-hidden: batch_size = 1
 <class 'IndexError'>
 list index out of range
------ END 1b-2-hidden [took 0:00:00.000221 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 1b-2-hidden [took 0:00:00.000089 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1b-3-hidden: same_lengths
 <class 'IndexError'>
 list index out of range
------ END 1b-3-hidden [took 0:00:00.000228 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+----- END 1b-3-hidden [took 0:00:00.000088 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1b-4-hidden: different_lengths
 <class 'IndexError'>
 list index out of range
------ END 1b-4-hidden [took 0:00:00.000223 (max allowed -1 seconds), ???/2 points] (hidden test ungraded)
+----- END 1b-4-hidden [took 0:00:00.000087 (max allowed -1 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1c-0-hidden:  Sanity check for Parser Model
 Loading data...
-took 1.75 seconds
-Building parser...
-took 0.02 seconds
-Loading pretrained embeddings...
-took 1.11 seconds
-Vectorizing data...
-took 0.02 seconds
-Preprocessing training data...
-took 0.44 seconds
-Loading data...
-took 1.07 seconds
+took 0.68 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.92 seconds
+took 0.81 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
-took 0.49 seconds
+took 0.36 seconds
+Loading data...
+took 0.79 seconds
+Building parser...
+took 0.01 seconds
+Loading pretrained embeddings...
+took 0.79 seconds
+Vectorizing data...
+took 0.02 seconds
+Preprocessing training data...
+took 0.38 seconds
 <class 'RuntimeError'>
 mat1 and mat2 shapes cannot be multiplied (180x50 and 36x200)
------ END 1c-0-hidden [took 0:00:02.608336 (max allowed 30 seconds), ???/0.1 points] (hidden test ungraded)
+----- END 1c-0-hidden [took 0:00:02.039845 (max allowed 30 seconds), ???/0.1 points] (hidden test ungraded)
 
 ----- START 1c-1-hidden: predict_on_batch
 Loading data...
-took 0.99 seconds
+took 0.74 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.92 seconds
+took 0.78 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
-took 0.48 seconds
+took 0.37 seconds
 <class 'RuntimeError'>
 mat1 and mat2 shapes cannot be multiplied (73728x50 and 36x200)
------ END 1c-1-hidden [took 0:00:00.058891 (max allowed 30 seconds), ???/2.9 points] (hidden test ungraded)
+----- END 1c-1-hidden [took 0:00:00.051386 (max allowed 30 seconds), ???/2.9 points] (hidden test ungraded)
 
 ----- START 1c-2-hidden: uses_xavier
 Loading data...
-took 1.01 seconds
+took 0.75 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.97 seconds
+took 0.80 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
-took 0.53 seconds
------ END 1c-2-hidden [took 0:00:00.000231 (max allowed 100 seconds), ???/1 points] (hidden test ungraded)
+took 0.40 seconds
+----- END 1c-2-hidden [took 0:00:00.009158 (max allowed 100 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1c-3-hidden: Complete training and Test Set UAS
 Loading data...
-took 0.90 seconds
+took 0.69 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 1.02 seconds
+took 0.84 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
-took 0.32 seconds
+took 0.29 seconds
 Epoch 1 out of 2
 <class 'AttributeError'>
 'Tensor' object has no attribute 'forward'
------ END 1c-3-hidden [took 0:00:00.390734 (max allowed 240 seconds), ???/5 points] (hidden test ungraded)
+----- END 1c-3-hidden [took 0:00:00.517066 (max allowed 240 seconds), ???/5 points] (hidden test ungraded)
 
 Note that the hidden test cases do not check for correctness.
 They are provided for you to verify that the functions do not crash and run within the time limit.
