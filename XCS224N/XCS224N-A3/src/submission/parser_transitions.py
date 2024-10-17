@@ -88,25 +88,20 @@ def minibatch_parse(sentences, model, device, batch_size):
     for sentence in sentences:
         partial_parses.append(PartialParse(sentence))
     unfinished_parses = partial_parses
-    while unfinished_parses:
-        batch = []
-        if len(unfinished_parses) < batch_size:
-            batch = unfinished_parses
-        else:
-            batch = unfinished_parses[:batch_size]
-        transitions = model.predict(batch, device=device)
-        for i in range(len(batch)):
-            batch[i].parse_step(transitions[i])
-        to_remove = []
-        for i in range(len(unfinished_parses)):
-            if len(unfinished_parses[i].stack) == 0 and not unfinished_parses[i].buffer:
-                to_remove.append(i)
 
-        unfinished_parses = [parse for parse in unfinished_parses if parse not in to_remove]
-    
-    dependencies = []
-    for parse in partial_parses:
-        dependencies.append(parse.dependencies)
+    while len(unfinished_parses) != 0:
+        minibatch = unfinished_parses[:batch_size]
+        transitions = model.predict(minibatch, device)
+        print(batch_size)
+        print(minibatch)
+        print(transitions)
+        to_remove = list()
+        for i in range(len(minibatch)):
+            partial_parses[i].parse_step(transitions[i])
+
+        unfinished_parses.pop()
+
+    dependencies = ["placeholder"]
     ### END CODE HERE
 
     return dependencies
