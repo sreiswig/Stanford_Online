@@ -101,8 +101,8 @@ def minibatch_parse(sentences, model, device, batch_size):
         for i in range(len(unfinished_parses)):
             if len(unfinished_parses[i].stack) == 0 and not unfinished_parses[i].buffer:
                 to_remove.append(i)
-        for i in reversed(to_remove):
-            unfinished_parses.remove(i)
+
+        unfinished_parses = [parse for parse in unfinished_parses if parse not in to_remove]
     
     dependencies = []
     for parse in partial_parses:

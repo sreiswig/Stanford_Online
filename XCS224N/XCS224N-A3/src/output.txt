@@ -25,7 +25,7 @@ parse test passed!
 ----- END 1a-6-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1b-0-basic:  Sanity check for minibatch_parse
-<class 'IndexError'>
+<class 'IndexError>
 list index out of range
 ----- END 1b-0-basic [took 0:00:00.000683 (max allowed 5 seconds), 0/0.1 points]
 
