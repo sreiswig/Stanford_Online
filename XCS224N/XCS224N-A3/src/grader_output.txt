@@ -3,11 +3,11 @@
 SHIFT test passed!
 LEFT-ARC test passed!
 RIGHT-ARC test passed!
------ END 1a-0-basic [took 0:00:00.000021 (max allowed 5 seconds), 0.1/0.1 points]
+----- END 1a-0-basic [took 0:00:00.000023 (max allowed 5 seconds), 0.1/0.1 points]
 
 ----- START 1a-1-basic:  Sanity check for PartialParse.parse
 parse test passed!
------ END 1a-1-basic [took 0:00:00.000015 (max allowed 5 seconds), 0.1/0.1 points]
+----- END 1a-1-basic [took 0:00:00.000014 (max allowed 5 seconds), 0.1/0.1 points]
 
 ----- START 1a-2-hidden:  init
 ----- END 1a-2-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
@@ -16,7 +16,7 @@ parse test passed!
 ----- END 1a-3-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
 
 ----- START 1a-4-hidden:  right-arc
------ END 1a-4-hidden [took 0:00:00.000008 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 1a-4-hidden [took 0:00:00.000009 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1a-5-hidden:  left-arc
 ----- END 1a-5-hidden [took 0:00:00.000009 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
@@ -25,115 +25,24 @@ parse test passed!
 ----- END 1a-6-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1b-0-basic:  Sanity check for minibatch_parse
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a6304f0>, <submission.parser_transitions.PartialParse object at 0x7f253a6300d0>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a6304f0>, <submission.parser_transitions.PartialParse object at 0x7f253a6300d0>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a6304f0>, <submission.parser_transitions.PartialParse object at 0x7f253a6300d0>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a6304f0>]
-['RA']
-<class 'AssertionError'>
-minibatch_parse test resulted in dependency list ('a', 'c', 'd', 'e', 'e', 'h', 'l', 'l', 'o', 'p', 'r'), expected (('ROOT', 'right'), ('arcs', 'only'), ('right', 'arcs'))
------ END 1b-0-basic [took 0:00:00.000312 (max allowed 5 seconds), 0/0.1 points]
+minibatch_parse test passed!
+----- END 1b-0-basic [took 0:00:00.000031 (max allowed 5 seconds), 0.1/0.1 points]
 
 ----- START 1b-1-hidden: single batch
-3
-[<submission.parser_transitions.PartialParse object at 0x7f253a630160>, <submission.parser_transitions.PartialParse object at 0x7f253a6304f0>, <submission.parser_transitions.PartialParse object at 0x7f253a6305b0>]
-['S', 'S', 'S']
-3
-[<submission.parser_transitions.PartialParse object at 0x7f253a630160>, <submission.parser_transitions.PartialParse object at 0x7f253a6304f0>]
-['S', 'S']
-3
-[<submission.parser_transitions.PartialParse object at 0x7f253a630160>]
-['S']
-3
-[<submission.parser_transitions.PartialParse object at 0x7f253a6300d0>, <submission.parser_transitions.PartialParse object at 0x7f253a6301c0>, <submission.parser_transitions.PartialParse object at 0x7f253a630760>]
-['S', 'S', 'S']
-3
-[<submission.parser_transitions.PartialParse object at 0x7f253a6300d0>, <submission.parser_transitions.PartialParse object at 0x7f253a6301c0>]
-['S', 'S']
-3
-[<submission.parser_transitions.PartialParse object at 0x7f253a6300d0>]
-['S']
------ END 1b-1-hidden [took 0:00:00.000034 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
+----- END 1b-1-hidden [took 0:00:00.000029 (max allowed 5 seconds), ???/0.9 points] (hidden test ungraded)
 
 ----- START 1b-2-hidden: batch_size = 1
-1
-[<submission.parser_transitions.PartialParse object at 0x7f253a630640>]
-['S']
-1
-[<submission.parser_transitions.PartialParse object at 0x7f253a630640>]
-['S']
-1
-[<submission.parser_transitions.PartialParse object at 0x7f253a630640>]
-['S']
-1
-[<submission.parser_transitions.PartialParse object at 0x7f253a630190>]
-['S']
-1
-[<submission.parser_transitions.PartialParse object at 0x7f253a630190>]
-['S']
-1
-[<submission.parser_transitions.PartialParse object at 0x7f253a630190>]
-['S']
------ END 1b-2-hidden [took 0:00:00.000020 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 1b-2-hidden [took 0:00:00.000034 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1b-3-hidden: same_lengths
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630130>, <submission.parser_transitions.PartialParse object at 0x7f253a630640>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630130>, <submission.parser_transitions.PartialParse object at 0x7f253a630640>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630130>]
-['S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a6300d0>, <submission.parser_transitions.PartialParse object at 0x7f253a630160>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a6300d0>, <submission.parser_transitions.PartialParse object at 0x7f253a630160>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a6300d0>]
-['S']
------ END 1b-3-hidden [took 0:00:00.000022 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+----- END 1b-3-hidden [took 0:00:00.000029 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1b-4-hidden: different_lengths
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630220>, <submission.parser_transitions.PartialParse object at 0x7f253a630130>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630220>, <submission.parser_transitions.PartialParse object at 0x7f253a630130>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630220>, <submission.parser_transitions.PartialParse object at 0x7f253a630130>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630220>]
-['RA']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630190>, <submission.parser_transitions.PartialParse object at 0x7f253a630640>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630190>, <submission.parser_transitions.PartialParse object at 0x7f253a630640>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630190>, <submission.parser_transitions.PartialParse object at 0x7f253a630640>]
-['S', 'S']
-2
-[<submission.parser_transitions.PartialParse object at 0x7f253a630190>]
-['RA']
------ END 1b-4-hidden [took 0:00:00.000026 (max allowed -1 seconds), ???/2 points] (hidden test ungraded)
+----- END 1b-4-hidden [took 0:00:00.000039 (max allowed -1 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1c-0-hidden:  Sanity check for Parser Model
 Loading data...
-took 0.68 seconds
+took 0.70 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
@@ -143,7 +52,7 @@ took 0.02 seconds
 Preprocessing training data...
 took 0.36 seconds
 Loading data...
-took 0.80 seconds
+took 0.83 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
@@ -154,11 +63,11 @@ Preprocessing training data...
 took 0.38 seconds
 <class 'RuntimeError'>
 mat1 and mat2 shapes cannot be multiplied (180x50 and 36x200)
------ END 1c-0-hidden [took 0:00:02.037850 (max allowed 30 seconds), ???/0.1 points] (hidden test ungraded)
+----- END 1c-0-hidden [took 0:00:02.090668 (max allowed 30 seconds), ???/0.1 points] (hidden test ungraded)
 
 ----- START 1c-1-hidden: predict_on_batch
 Loading data...
-took 0.75 seconds
+took 0.76 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
@@ -169,7 +78,7 @@ Preprocessing training data...
 took 0.38 seconds
 <class 'RuntimeError'>
 mat1 and mat2 shapes cannot be multiplied (73728x50 and 36x200)
------ END 1c-1-hidden [took 0:00:00.044594 (max allowed 30 seconds), ???/2.9 points] (hidden test ungraded)
+----- END 1c-1-hidden [took 0:00:00.043088 (max allowed 30 seconds), ???/2.9 points] (hidden test ungraded)
 
 ----- START 1c-2-hidden: uses_xavier
 Loading data...
@@ -177,20 +86,20 @@ took 0.78 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.81 seconds
+took 0.82 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
 took 0.41 seconds
------ END 1c-2-hidden [took 0:00:00.000248 (max allowed 100 seconds), ???/1 points] (hidden test ungraded)
+----- END 1c-2-hidden [took 0:00:00.000205 (max allowed 100 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1c-3-hidden: Complete training and Test Set UAS
 Loading data...
-took 0.70 seconds
+took 0.72 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.84 seconds
+took 0.85 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
@@ -198,9 +107,9 @@ took 0.29 seconds
 Epoch 1 out of 2
 <class 'AttributeError'>
 'Tensor' object has no attribute 'forward'
------ END 1c-3-hidden [took 0:00:00.362830 (max allowed 240 seconds), ???/5 points] (hidden test ungraded)
+----- END 1c-3-hidden [took 0:00:00.357868 (max allowed 240 seconds), ???/5 points] (hidden test ungraded)
 
 Note that the hidden test cases do not check for correctness.
 They are provided for you to verify that the functions do not crash and run within the time limit.
 Points for these parts not assigned by the grader unless the solution is present (indicated by "???").
-========== END GRADING [0.2/0.30000000000000004 points + 0/0 extra credit]
+========== END GRADING [0.30000000000000004/0.30000000000000004 points + 0/0 extra credit]
