@@ -59,7 +59,7 @@ class ParserModel(nn.Module):
         ###     Linear Layer: https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#torch.nn.Linear
         ###     Dropout: https://pytorch.org/docs/stable/generated/torch.nn.Dropout.html#torch.nn.Dropout
         ### START CODE HERE (~3 Lines)
-        self.embed_to_hidden = nn.Linear(n_features, hidden_size)
+        self.embed_to_hidden = nn.Linear(n_features * self.embed_size, hidden_size)
         self.dropout = nn.Dropout(dropout_prob)
         self.hidden_to_logits = nn.Linear(hidden_size, n_classes)
         ### END CODE HERE 
@@ -123,6 +123,7 @@ class ParserModel(nn.Module):
         ###     View: https://pytorch.org/docs/stable/tensor_view.html
         ### START CODE HERE (~1-3 Lines)
         x = self.pretrained_embeddings(t)
+        x = x.view(x.size(0), x.size(1) * x.size(2))
         ### END CODE HERE
         return x
 
@@ -160,7 +161,7 @@ class ParserModel(nn.Module):
         ###  START CODE HERE (~3-5 lines)
         embeddings = self.embedding_lookup(t)
         x = self.embed_to_hidden(embeddings)
-        hidden_units = F.ReLU(x)
+        hidden_units = F.relu(x)
         x = self.dropout(hidden_units)
         logits = self.hidden_to_logits(x)
         ### END CODE HERE

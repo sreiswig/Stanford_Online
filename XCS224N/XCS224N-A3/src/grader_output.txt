@@ -19,7 +19,7 @@ parse test passed!
 ----- END 1a-4-hidden [took 0:00:00.000009 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1a-5-hidden:  left-arc
------ END 1a-5-hidden [took 0:00:00.000009 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
+----- END 1a-5-hidden [took 0:00:00.000008 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1a-6-hidden:  parse
 ----- END 1a-6-hidden [took 0:00:00.000010 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
@@ -35,39 +35,42 @@ minibatch_parse test passed!
 ----- END 1b-2-hidden [took 0:00:00.000034 (max allowed 5 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1b-3-hidden: same_lengths
------ END 1b-3-hidden [took 0:00:00.000029 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+----- END 1b-3-hidden [took 0:00:00.000030 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1b-4-hidden: different_lengths
 ----- END 1b-4-hidden [took 0:00:00.000039 (max allowed -1 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1c-0-hidden:  Sanity check for Parser Model
 Loading data...
-took 0.70 seconds
+took 0.68 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.82 seconds
+took 0.81 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
 took 0.36 seconds
 Loading data...
-took 0.83 seconds
+took 0.79 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.80 seconds
+took 0.78 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
 took 0.38 seconds
-<class 'RuntimeError'>
-mat1 and mat2 shapes cannot be multiplied (180x50 and 36x200)
------ END 1c-0-hidden [took 0:00:02.090668 (max allowed 30 seconds), ???/0.1 points] (hidden test ungraded)
+actual output
+[[0.22587580978870392, -0.6349678635597229, 0.3032393455505371], [-1.783186912536621, 1.9967725276947021, 2.2721121311187744], [-2.100451707839966, 0.420969158411026, 1.1482694149017334], [-1.4711591005325317, 0.2818141579627991, 1.6728817224502563], [-2.2627928256988525, -0.02963433414697647, 2.0193300247192383]]
+
+expected output
+[[0.22587580978870392, -0.6349678635597229, 0.3032393455505371], [-1.783186912536621, 1.9967725276947021, 2.2721121311187744], [-2.100451707839966, 0.420969158411026, 1.1482694149017334], [-1.4711591005325317, 0.2818141579627991, 1.6728817224502563], [-2.2627928256988525, -0.02963433414697647, 2.0193300247192383]]
+----- END 1c-0-hidden [took 0:00:02.026534 (max allowed 30 seconds), ???/0.1 points] (hidden test ungraded)
 
 ----- START 1c-1-hidden: predict_on_batch
 Loading data...
-took 0.76 seconds
+took 0.74 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
@@ -76,38 +79,36 @@ Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
 took 0.38 seconds
-<class 'RuntimeError'>
-mat1 and mat2 shapes cannot be multiplied (73728x50 and 36x200)
------ END 1c-1-hidden [took 0:00:00.043088 (max allowed 30 seconds), ???/2.9 points] (hidden test ungraded)
+----- END 1c-1-hidden [took 0:00:00.061465 (max allowed 30 seconds), ???/2.9 points] (hidden test ungraded)
 
 ----- START 1c-2-hidden: uses_xavier
 Loading data...
-took 0.78 seconds
+took 0.71 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.82 seconds
+took 0.76 seconds
 Vectorizing data...
-took 0.02 seconds
+took 0.10 seconds
 Preprocessing training data...
-took 0.41 seconds
------ END 1c-2-hidden [took 0:00:00.000205 (max allowed 100 seconds), ???/1 points] (hidden test ungraded)
+took 0.38 seconds
+----- END 1c-2-hidden [took 0:00:00.004994 (max allowed 100 seconds), ???/1 points] (hidden test ungraded)
 
 ----- START 1c-3-hidden: Complete training and Test Set UAS
 Loading data...
-took 0.72 seconds
+took 0.73 seconds
 Building parser...
 took 0.01 seconds
 Loading pretrained embeddings...
-took 0.85 seconds
+took 0.78 seconds
 Vectorizing data...
 took 0.02 seconds
 Preprocessing training data...
-took 0.29 seconds
+took 0.38 seconds
 Epoch 1 out of 2
 <class 'AttributeError'>
 'Tensor' object has no attribute 'forward'
------ END 1c-3-hidden [took 0:00:00.357868 (max allowed 240 seconds), ???/5 points] (hidden test ungraded)
+----- END 1c-3-hidden [took 0:00:00.313532 (max allowed 240 seconds), ???/5 points] (hidden test ungraded)
 
 Note that the hidden test cases do not check for correctness.
 They are provided for you to verify that the functions do not crash and run within the time limit.
