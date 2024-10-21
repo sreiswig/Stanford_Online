@@ -1,0 +1,43 @@
+========== START GRADING
+----- START 1a-0-hidden:  pad sentences
+----- END 1a-0-hidden [took 0:00:00.000040 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1b-0-basic: Verify correct class
+----- END 1b-0-basic [took 0:00:00.000023 (max allowed 5 seconds), 1.5/1.5 points]
+
+----- START 1b-1-basic: Verify correct parameters
+----- END 1b-1-basic [took 0:00:00.000019 (max allowed 5 seconds), 1.5/1.5 points]
+
+----- START 1c-0-basic: Verify self.encoder is correct
+<class 'AssertionError'>
+None is not an instance of <class 'torch.nn.modules.rnn.LSTM'>
+----- END 1c-0-basic [took 0:00:00.000333 (max allowed 5 seconds), 0/1 points]
+
+----- START 1c-1-basic: Verify self.decoder is correct
+<class 'AssertionError'>
+None is not an instance of <class 'torch.nn.modules.rnn.LSTMCell'>
+----- END 1c-1-basic [took 0:00:00.000080 (max allowed 5 seconds), 0/1 points]
+
+----- START 1c-2-basic: Verify that self.h_projection, self.c_projection, and self.att_projection are correct
+<class 'AssertionError'>
+None is not an instance of <class 'torch.nn.modules.linear.Linear'>
+----- END 1c-2-basic [took 0:00:00.000068 (max allowed 5 seconds), 0/0.5 points]
+
+----- START 1c-3-basic: Verify that self.combined_output_projection is correct
+<class 'AssertionError'>
+None is not an instance of <class 'torch.nn.modules.linear.Linear'>
+----- END 1c-3-basic [took 0:00:00.000064 (max allowed 5 seconds), 0/0.5 points]
+
+----- START 1c-4-basic: Verify that self.target_vocab_projection is correct
+<class 'AssertionError'>
+None is not an instance of <class 'torch.nn.modules.linear.Linear'>
+----- END 1c-4-basic [took 0:00:00.000069 (max allowed 5 seconds), 0/0.5 points]
+
+----- START 1c-5-basic: Verify that self.dropout is correct
+<class 'AssertionError'>
+None is not an instance of <class 'torch.nn.modules.dropout.Dropout'>
+----- END 1c-5-basic [took 0:00:00.000066 (max allowed 5 seconds), 0/0.5 points]
+
+----- START 1d-0-basic:  Sanity check for Encode.  Compares student output to that of model with dummy data.
+<class 'AttributeError'>
+'NoneType' object has no attribute 'weight'
