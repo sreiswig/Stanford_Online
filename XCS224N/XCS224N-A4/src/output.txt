@@ -1,43 +1,56 @@
 ========== START GRADING
 ----- START 1a-0-hidden:  pad sentences
------ END 1a-0-hidden [took 0:00:00.000040 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+----- END 1a-0-hidden [took 0:00:00.000029 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1b-0-basic: Verify correct class
------ END 1b-0-basic [took 0:00:00.000023 (max allowed 5 seconds), 1.5/1.5 points]
+----- END 1b-0-basic [took 0:00:00.000015 (max allowed 5 seconds), 1.5/1.5 points]
 
 ----- START 1b-1-basic: Verify correct parameters
------ END 1b-1-basic [took 0:00:00.000019 (max allowed 5 seconds), 1.5/1.5 points]
+----- END 1b-1-basic [took 0:00:00.000016 (max allowed 5 seconds), 1.5/1.5 points]
 
 ----- START 1c-0-basic: Verify self.encoder is correct
-<class 'AssertionError'>
-None is not an instance of <class 'torch.nn.modules.rnn.LSTM'>
------ END 1c-0-basic [took 0:00:00.000333 (max allowed 5 seconds), 0/1 points]
+----- END 1c-0-basic [took 0:00:00.000016 (max allowed 5 seconds), 1/1 points]
 
 ----- START 1c-1-basic: Verify self.decoder is correct
-<class 'AssertionError'>
-None is not an instance of <class 'torch.nn.modules.rnn.LSTMCell'>
------ END 1c-1-basic [took 0:00:00.000080 (max allowed 5 seconds), 0/1 points]
+----- END 1c-1-basic [took 0:00:00.000022 (max allowed 5 seconds), 1/1 points]
 
 ----- START 1c-2-basic: Verify that self.h_projection, self.c_projection, and self.att_projection are correct
-<class 'AssertionError'>
-None is not an instance of <class 'torch.nn.modules.linear.Linear'>
------ END 1c-2-basic [took 0:00:00.000068 (max allowed 5 seconds), 0/0.5 points]
+----- END 1c-2-basic [took 0:00:00.000024 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 1c-3-basic: Verify that self.combined_output_projection is correct
-<class 'AssertionError'>
-None is not an instance of <class 'torch.nn.modules.linear.Linear'>
------ END 1c-3-basic [took 0:00:00.000064 (max allowed 5 seconds), 0/0.5 points]
+----- END 1c-3-basic [took 0:00:00.000019 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 1c-4-basic: Verify that self.target_vocab_projection is correct
-<class 'AssertionError'>
-None is not an instance of <class 'torch.nn.modules.linear.Linear'>
------ END 1c-4-basic [took 0:00:00.000069 (max allowed 5 seconds), 0/0.5 points]
+----- END 1c-4-basic [took 0:00:00.000018 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 1c-5-basic: Verify that self.dropout is correct
-<class 'AssertionError'>
-None is not an instance of <class 'torch.nn.modules.dropout.Dropout'>
------ END 1c-5-basic [took 0:00:00.000066 (max allowed 5 seconds), 0/0.5 points]
+----- END 1c-5-basic [took 0:00:00.000018 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 1d-0-basic:  Sanity check for Encode.  Compares student output to that of model with dummy data.
+enc_hiddens Sanity Checks Passed!
+dec_init_state[0] Sanity Checks Passed!
+dec_init_state[1] Sanity Checks Passed!
+----- END 1d-0-basic [took 0:00:00.021057 (max allowed 5 seconds), 0.1/0.1 points]
+
+----- START 1d-1-hidden: Encode Hiddens Check
+----- END 1d-1-hidden [took 0:00:00.000134 (max allowed 5 seconds), ???/3.9 points] (hidden test ungraded)
+
+----- START 1d-2-hidden: dec_state[0] Check
+----- END 1d-2-hidden [took 0:00:00.000074 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1d-3-hidden: dec_state[1] Check
+----- END 1d-3-hidden [took 0:00:00.000071 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1e-0-basic:  Sanity check for Decode.  Compares student output to that of model with dummy data.
 <class 'AttributeError'>
-'NoneType' object has no attribute 'weight'
+'list' object has no attribute 'numpy'
+----- END 1e-0-basic [took 0:00:00.001017 (max allowed 5 seconds), 0/0.1 points]
+
+----- START 1e-1-hidden: Combined Outputs Check
+<class 'AttributeError'>
+'list' object has no attribute 'numpy'
+----- END 1e-1-hidden [took 0:00:00.028875 (max allowed 5 seconds), ???/7.9 points] (hidden test ungraded)
+
+----- START 1f-0-basic:  Sanity check for Step.  Compares student output to that of model with dummy data.
+<class 'NameError'>
+name 'e_t' is not defined
