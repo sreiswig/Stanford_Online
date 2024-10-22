@@ -1,21 +1,21 @@
 ========== START GRADING
 ----- START 1a-0-hidden:  pad sentences
------ END 1a-0-hidden [took 0:00:00.000029 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+----- END 1a-0-hidden [took 0:00:00.000026 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1b-0-basic: Verify correct class
------ END 1b-0-basic [took 0:00:00.000015 (max allowed 5 seconds), 1.5/1.5 points]
+----- END 1b-0-basic [took 0:00:00.000023 (max allowed 5 seconds), 1.5/1.5 points]
 
 ----- START 1b-1-basic: Verify correct parameters
------ END 1b-1-basic [took 0:00:00.000016 (max allowed 5 seconds), 1.5/1.5 points]
+----- END 1b-1-basic [took 0:00:00.000025 (max allowed 5 seconds), 1.5/1.5 points]
 
 ----- START 1c-0-basic: Verify self.encoder is correct
------ END 1c-0-basic [took 0:00:00.000016 (max allowed 5 seconds), 1/1 points]
+----- END 1c-0-basic [took 0:00:00.000018 (max allowed 5 seconds), 1/1 points]
 
 ----- START 1c-1-basic: Verify self.decoder is correct
 ----- END 1c-1-basic [took 0:00:00.000022 (max allowed 5 seconds), 1/1 points]
 
 ----- START 1c-2-basic: Verify that self.h_projection, self.c_projection, and self.att_projection are correct
------ END 1c-2-basic [took 0:00:00.000024 (max allowed 5 seconds), 0.5/0.5 points]
+----- END 1c-2-basic [took 0:00:00.000025 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 1c-3-basic: Verify that self.combined_output_projection is correct
 ----- END 1c-3-basic [took 0:00:00.000019 (max allowed 5 seconds), 0.5/0.5 points]
@@ -24,33 +24,56 @@
 ----- END 1c-4-basic [took 0:00:00.000018 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 1c-5-basic: Verify that self.dropout is correct
------ END 1c-5-basic [took 0:00:00.000018 (max allowed 5 seconds), 0.5/0.5 points]
+----- END 1c-5-basic [took 0:00:00.000017 (max allowed 5 seconds), 0.5/0.5 points]
 
 ----- START 1d-0-basic:  Sanity check for Encode.  Compares student output to that of model with dummy data.
 enc_hiddens Sanity Checks Passed!
 dec_init_state[0] Sanity Checks Passed!
 dec_init_state[1] Sanity Checks Passed!
------ END 1d-0-basic [took 0:00:00.021057 (max allowed 5 seconds), 0.1/0.1 points]
+----- END 1d-0-basic [took 0:00:00.009941 (max allowed 5 seconds), 0.1/0.1 points]
 
 ----- START 1d-1-hidden: Encode Hiddens Check
------ END 1d-1-hidden [took 0:00:00.000134 (max allowed 5 seconds), ???/3.9 points] (hidden test ungraded)
+----- END 1d-1-hidden [took 0:00:00.000135 (max allowed 5 seconds), ???/3.9 points] (hidden test ungraded)
 
 ----- START 1d-2-hidden: dec_state[0] Check
------ END 1d-2-hidden [took 0:00:00.000074 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+----- END 1d-2-hidden [took 0:00:00.000066 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1d-3-hidden: dec_state[1] Check
 ----- END 1d-3-hidden [took 0:00:00.000071 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
 
 ----- START 1e-0-basic:  Sanity check for Decode.  Compares student output to that of model with dummy data.
-<class 'AttributeError'>
-'list' object has no attribute 'numpy'
------ END 1e-0-basic [took 0:00:00.001017 (max allowed 5 seconds), 0/0.1 points]
+----- END 1e-0-basic [took 0:00:00.009786 (max allowed 5 seconds), 0.1/0.1 points]
 
 ----- START 1e-1-hidden: Combined Outputs Check
-<class 'AttributeError'>
-'list' object has no attribute 'numpy'
------ END 1e-1-hidden [took 0:00:00.028875 (max allowed 5 seconds), ???/7.9 points] (hidden test ungraded)
+----- END 1e-1-hidden [took 0:00:00.066336 (max allowed 5 seconds), ???/7.9 points] (hidden test ungraded)
 
 ----- START 1f-0-basic:  Sanity check for Step.  Compares student output to that of model with dummy data.
-<class 'NameError'>
-name 'e_t' is not defined
+dec_state[0] Sanity Checks Passed!
+dec_state[1] Sanity Checks Passed!
+combined_output  Sanity Checks Passed!
+----- END 1f-0-basic [took 0:00:00.007824 (max allowed 5 seconds), 0.1/0.1 points]
+
+----- START 1f-1-hidden: Decoder Hiddens Check
+----- END 1f-1-hidden [took 0:00:00.000055 (max allowed 5 seconds), ???/1.9 points] (hidden test ungraded)
+
+----- START 1f-2-hidden: Decoder State Check
+----- END 1f-2-hidden [took 0:00:00.000052 (max allowed 5 seconds), ???/2 points] (hidden test ungraded)
+
+----- START 1f-3-hidden: o_t Check
+----- END 1f-3-hidden [took 0:00:00.000319 (max allowed 5 seconds), ???/3 points] (hidden test ungraded)
+
+----- START 1f-4-hidden: e_t Check
+----- END 1f-4-hidden [took 0:00:00.000047 (max allowed 5 seconds), ???/3 points] (hidden test ungraded)
+
+----- START 1g-0-hidden: BLEU score check
+<class 'AssertionError'>
+False is not true : Output test file (./submission/test_outputs.txt) does not exist. To generate this file, follow these steps:
+1. Generate vocab.py (sh run.sh vocab)
+2. Generate and train a model (sh run.sh train_gpu)
+3. Test trained model (takes 30min - 1 hour to train) (sh run.sh test_gpu)
+----- END 1g-0-hidden [took 0:00:00.000764 (max allowed 5 seconds), ???/3 points] (hidden test ungraded)
+
+Note that the hidden test cases do not check for correctness.
+They are provided for you to verify that the functions do not crash and run within the time limit.
+Points for these parts not assigned by the grader unless the solution is present (indicated by "???").
+========== END GRADING [7.299999999999999/7.299999999999999 points + 0/0 extra credit]
