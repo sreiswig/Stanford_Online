@@ -10,7 +10,7 @@ def initialize_vanilla_model(mconf):
     attention_model = None
     ### TODO:
     ### [part c]: Make some model here
-
+    attention_model = 0
     ### START CODE HERE
     ### END CODE HERE
     return attention_model
