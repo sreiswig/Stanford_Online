@@ -176,6 +176,7 @@ class CharCorruptionDataset(Dataset):
         ### [part e]: see spec above
 
         ### START CODE HERE
+        return self.item[idx]
         ### END CODE HERE
 
         raise NotImplementedError
