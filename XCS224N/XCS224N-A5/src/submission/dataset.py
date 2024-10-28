@@ -177,9 +177,10 @@ class CharCorruptionDataset(Dataset):
 
         ### START CODE HERE
         return self.item[idx]
-        ### END CODE HERE
 
-        raise NotImplementedError
+    def truncate():
+        return
+        ### END CODE HERE
 
 """
 Code under here is strictly for your debugging purposes; feel free to modify
