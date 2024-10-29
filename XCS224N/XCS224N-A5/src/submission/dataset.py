@@ -176,10 +176,14 @@ class CharCorruptionDataset(Dataset):
         ### [part e]: see spec above
 
         ### START CODE HERE
-        return self.item[idx]
-
-    def truncate():
-        return
+        document = self.item[idx]
+        x = None
+        y = None
+        trunc_len = random.randint(4, int(self.block_size*3/4))
+        trunc_doc = document[:trunc_len]
+        masked_content_len = 
+        prefix, masked_content, suffix = 
+        return (x, y)
         ### END CODE HERE
 
 """
