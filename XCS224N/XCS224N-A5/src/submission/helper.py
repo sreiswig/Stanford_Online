@@ -12,6 +12,7 @@ def initialize_vanilla_model(mconf):
     ### [part c]: Make some model here
     attention_model = 0
     ### START CODE HERE
+    attention_model = GPT(mconf)
     ### END CODE HERE
     return attention_model
 
@@ -60,6 +61,7 @@ def finetune(reading_params_path, finetune_corpus_path, pretrain_dataset, block_
     trainer_obj = None #Trainer object (see trainer.py for more details)
     tconf = None #TrainerConfig object (see trainer.py for more details)
     ### START CODE HERE
+
     ### END CODE HERE
     return tconf, trainer_obj
 
