@@ -61,7 +61,20 @@ def finetune(reading_params_path, finetune_corpus_path, pretrain_dataset, block_
     trainer_obj = None #Trainer object (see trainer.py for more details)
     tconf = None #TrainerConfig object (see trainer.py for more details)
     ### START CODE HERE
+    if reading_params_path:
+        max_epochs = 10
+    else:
+        max_epochs = 75
 
+    batch_size=256
+    learning_rate=finetune_lr
+    lr_decay=True
+    warmup_tokens=512 * 20
+    final_tokens=200*len(pretrain_dataset) * block_size
+    num_workers=0
+
+    tconf = TrainerConfig(max_epochs=max_epochs, batch_size=batch_size, learning_rate=learning_rate, lr_decay=lr_decay, warmup_tokens=warmup_tokens, final_tokens=final_tokens, num_workers=num_workers)
+    trainer_obj = Trainer(model, finetune_corpus_path, tconf)
     ### END CODE HERE
     return tconf, trainer_obj
 
