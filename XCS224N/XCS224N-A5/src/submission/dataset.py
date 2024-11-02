@@ -177,8 +177,6 @@ class CharCorruptionDataset(Dataset):
 
         ### START CODE HERE
         document = self.data[idx]
-        x = None
-        y = None
         trunc_len = random.randint(4, int(self.block_size*3/4))
         trunc_doc = document[:trunc_len]
         masked_content_len = random.randint(1, max(1, trunc_len // 4))
@@ -188,14 +186,21 @@ class CharCorruptionDataset(Dataset):
         masked_content = trunc_doc[mask_start:mask_start+trunc_len]
         suffix = trunc_doc[mask_start + masked_content_len:]
         
-        masked_string = (prefix + self.MASK_CHAR + suffix + self.MASK_CHAR + masked_content + self.MASK_CHAR + (self.PAD_CHAR * (self.block_size - len(prefix + self.MASK_CHAR + suffix + self.MASK_CHAR + masked_content + self.MASK_CHAR))))[:self.block_size]
+        masked_string = (prefix + 
+                         self.MASK_CHAR + 
+                         suffix + 
+                         self.MASK_CHAR + 
+                         masked_content + 
+                         self.MASK_CHAR) 
+        masked_string += (self.PAD_CHAR * (self.block_size - len(prefix + self.MASK_CHAR + suffix + self.MASK_CHAR + masked_content + self.MASK_CHAR)))
+        masked_string = masked_string[:self.block_size]
 
         input_string = masked_string[:-1]
         output_string = masked_string[1:]
 
         x = torch.tensor([self.stoi[char] for char in input_string], dtype=torch.long)
         y = torch.tensor([self.stoi[char] for char in output_string], dtype=torch.long)
-
+        
         return x, y
         ### END CODE HERE
 
