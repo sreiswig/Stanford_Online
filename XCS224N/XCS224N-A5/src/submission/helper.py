@@ -1,5 +1,5 @@
 from .model import GPT
-from .dataset import NameDataset
+from .dataset import CharCorruptionDataset, NameDataset
 from .trainer import Trainer, TrainerConfig
 
 import torch
@@ -62,7 +62,8 @@ def finetune(reading_params_path, finetune_corpus_path, pretrain_dataset, block_
     tconf = None #TrainerConfig object (see trainer.py for more details)
     ### START CODE HERE
     if reading_params_path:
-        torch.load(reading_params_path, map_location=torch.device('cpu'), weights_only=True)
+        state_dict = torch.load(reading_params_path, map_location=torch.device('cpu'), weights_only=True)
+        model.load_state_dict(state_dict)
         max_epochs = 10
     else:
         max_epochs = 75
@@ -81,8 +82,9 @@ def finetune(reading_params_path, finetune_corpus_path, pretrain_dataset, block_
                           warmup_tokens=warmup_tokens, 
                           final_tokens=final_tokens, 
                           num_workers=num_workers)
-
-    trainer_obj = Trainer(model, finetune_corpus_path, None, tconf)
+    
+    dataset = NameDataset(open(finetune_corpus_path).read(), pretrain_dataset)
+    trainer_obj = Trainer(model, dataset, None, tconf)
     ### END CODE HERE
     return tconf, trainer_obj
 
