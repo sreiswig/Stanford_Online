@@ -18,10 +18,12 @@ def initialize_vanilla_model(mconf):
 
 def initialize_perceiver_model(mconf, bottleneck_dim=32):
     attention_model = None
-    ### TODO
+    ### TODO:
     ### [part g]: Make some other model here
 
     ### START CODE HERE
+    attention_model = GPT(mconf)
+    
     ### END CODE HERE
     return attention_model
 
