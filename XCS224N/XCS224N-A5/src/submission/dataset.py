@@ -177,13 +177,14 @@ class CharCorruptionDataset(Dataset):
 
         ### START CODE HERE
         document = self.data[idx]
-        trunc_len = random.randint(4, int(self.block_size*3/4))
+        trunc_len = random.randint(4, self.max_context_size)
         trunc_doc = document[:trunc_len]
-        masked_content_len = random.randint(1, max(1, trunc_len // 4))
-        mask_start = random.randint(0, trunc_len - masked_content_len)
+
+        masked_content_len = max(1, int(len(trunc_doc) * self.masking_percent))
+        mask_start = random.randint(0, len(trunc_doc) - masked_content_len)
 
         prefix = trunc_doc[:mask_start]
-        masked_content = trunc_doc[mask_start:mask_start+trunc_len]
+        masked_content = trunc_doc[mask_start:mask_start + masked_content_len]
         suffix = trunc_doc[mask_start + masked_content_len:]
         
         masked_string = (prefix + 

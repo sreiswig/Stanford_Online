@@ -96,7 +96,8 @@ class DownProjectBlock(nn.Module):
             nn.Linear(4 * config.n_embd, config.n_embd),
             nn.Dropout(config.resid_pdrop),
         )
-        self.C = nn.init.xavier_uniform(torch.empty(1, config.bottleneck_dim, config.n_embd))
+        self.C = nn.Parameter(torch.empty(1, config.bottleneck_dim, config.n_embd))
+        nn.init.xavier_uniform_(self.C)
         ### END CODE HERE
 
     def forward(self, x_input):
@@ -108,9 +109,9 @@ class DownProjectBlock(nn.Module):
         ### Should be around 3-5 lines.
 
         ### START CODE HERE
-        x_input = x_input + self.attn(self.ln1(self.C))
-        x_input = x_input + self.mlp(self.ln2(self.C))
-        return x_input
+        x = self.attn(self.ln1(x_input), self.ln1(self.C))
+        x = x + self.mlp(self.ln2(x))
+        return x
         ### END CODE HERE
 
 
@@ -148,9 +149,9 @@ class UpProjectBlock(nn.Module):
         ### Should be around 3-5 lines.
 
         ### START CODE HERE
-        x_input = x_input + self.attn(self.ln1(y))
-        x_input = x_input + self.mlp(self.ln2(y))
-        return x_input
+        x = self.attn(self.ln1(y), x_input)
+        x = x + self.mlp(self.ln2(x))
+        return x
         ### END CODE HERE
 
 class GPT(nn.Module):
